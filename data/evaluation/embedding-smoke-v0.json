@@ -1,0 +1,164 @@
+{
+  "version": "embedding-smoke-v0",
+  "purpose": "中文原文摘录的开发小样本；不是冻结验收集",
+  "input_contract": "bge-m3-dense-v0",
+  "dimensions": 1024,
+  "source_commit": "350f483801b2badb95180047aa82cadb825852a2",
+  "passages": [
+    {
+      "id": "array",
+      "title": "数组",
+      "source_file": "data/knowledge/hello-algo-v0/documents/array.md",
+      "source_url": "https://github.com/krahets/hello-algo/blob/350f483801b2badb95180047aa82cadb825852a2/docs/chapter_array_and_linkedlist/array.md",
+      "source_sha256": "cdcb51bac0618630e6ee0af71261e226c0d234238e2431e033f103e8bd18f977",
+      "excerpts": [
+        "<u>数组（array）</u>是一种线性数据结构，其将相同类型的元素存储在连续的内存空间中。我们将元素在数组中的位置称为该元素的<u>索引（index）</u>。下图展示了数组的主要概念和存储方式。",
+        "在数组中访问元素非常高效，我们可以在 $O(1)$ 时间内随机访问数组中的任意一个元素。",
+        "数组元素在内存中是“紧挨着的”，它们之间没有空间再存放任何数据。如下图所示，如果想在数组中间插入一个元素，则需要将该元素之后的所有元素都向后移动一位，之后再把元素赋值给该索引。"
+      ],
+      "text": "<u>数组（array）</u>是一种线性数据结构，其将相同类型的元素存储在连续的内存空间中。我们将元素在数组中的位置称为该元素的<u>索引（index）</u>。下图展示了数组的主要概念和存储方式。\n\n在数组中访问元素非常高效，我们可以在 $O(1)$ 时间内随机访问数组中的任意一个元素。\n\n数组元素在内存中是“紧挨着的”，它们之间没有空间再存放任何数据。如下图所示，如果想在数组中间插入一个元素，则需要将该元素之后的所有元素都向后移动一位，之后再把元素赋值给该索引。"
+    },
+    {
+      "id": "linked_list",
+      "title": "链表",
+      "source_file": "data/knowledge/hello-algo-v0/documents/linked_list.md",
+      "source_url": "https://github.com/krahets/hello-algo/blob/350f483801b2badb95180047aa82cadb825852a2/docs/chapter_array_and_linkedlist/linked_list.md",
+      "source_sha256": "889e34c11168cb33fcc540511358adeca7cced1222f9b2b53474f18b5fac436b",
+      "excerpts": [
+        "<u>链表（linked list）</u>是一种线性数据结构，其中的每个元素都是一个节点对象，各个节点通过“引用”相连接。引用记录了下一个节点的内存地址，通过它可以从当前节点访问到下一个节点。",
+        "链表的设计使得各个节点可以分散存储在内存各处，它们的内存地址无须连续。"
+      ],
+      "text": "<u>链表（linked list）</u>是一种线性数据结构，其中的每个元素都是一个节点对象，各个节点通过“引用”相连接。引用记录了下一个节点的内存地址，通过它可以从当前节点访问到下一个节点。\n\n链表的设计使得各个节点可以分散存储在内存各处，它们的内存地址无须连续。"
+    },
+    {
+      "id": "stack",
+      "title": "栈",
+      "source_file": "data/knowledge/hello-algo-v0/documents/stack.md",
+      "source_url": "https://github.com/krahets/hello-algo/blob/350f483801b2badb95180047aa82cadb825852a2/docs/chapter_stack_and_queue/stack.md",
+      "source_sha256": "3c0ff86f2fd2e2a625fa79a319c662d42a4cae365fd678e70441cf9ccbe3d54e",
+      "excerpts": [
+        "<u>栈（stack）</u>是一种遵循先入后出逻辑的线性数据结构。",
+        "我们可以将栈类比为桌面上的一摞盘子，规定每次只能移动一个盘子，那么想取出底部的盘子，则需要先将上面的盘子依次移走。我们将盘子替换为各种类型的元素（如整数、字符、对象等），就得到了栈这种数据结构。"
+      ],
+      "text": "<u>栈（stack）</u>是一种遵循先入后出逻辑的线性数据结构。\n\n我们可以将栈类比为桌面上的一摞盘子，规定每次只能移动一个盘子，那么想取出底部的盘子，则需要先将上面的盘子依次移走。我们将盘子替换为各种类型的元素（如整数、字符、对象等），就得到了栈这种数据结构。"
+    },
+    {
+      "id": "queue",
+      "title": "队列",
+      "source_file": "data/knowledge/hello-algo-v0/documents/queue.md",
+      "source_url": "https://github.com/krahets/hello-algo/blob/350f483801b2badb95180047aa82cadb825852a2/docs/chapter_stack_and_queue/queue.md",
+      "source_sha256": "e073581754aa73eb8c83fe3abedc9cfedab0451de424a81990b7438995e7be7c",
+      "excerpts": [
+        "<u>队列（queue）</u>是一种遵循先入先出规则的线性数据结构。顾名思义，队列模拟了排队现象，即新来的人不断加入队列尾部，而位于队列头部的人逐个离开。",
+        "如下图所示，我们将队列头部称为“队首”，尾部称为“队尾”，将把元素加入队尾的操作称为“入队”，删除队首元素的操作称为“出队”。"
+      ],
+      "text": "<u>队列（queue）</u>是一种遵循先入先出规则的线性数据结构。顾名思义，队列模拟了排队现象，即新来的人不断加入队列尾部，而位于队列头部的人逐个离开。\n\n如下图所示，我们将队列头部称为“队首”，尾部称为“队尾”，将把元素加入队尾的操作称为“入队”，删除队首元素的操作称为“出队”。"
+    },
+    {
+      "id": "hash_map",
+      "title": "哈希表",
+      "source_file": "data/knowledge/hello-algo-v0/documents/hash_map.md",
+      "source_url": "https://github.com/krahets/hello-algo/blob/350f483801b2badb95180047aa82cadb825852a2/docs/chapter_hashing/hash_map.md",
+      "source_sha256": "0672153b1a3f261206fafc6203d691831fe4fc52dbfdb93a9311aefdf0301f9e",
+      "excerpts": [
+        "<u>哈希表（hash table）</u>，又称<u>散列表</u>，它通过建立键 `key` 与值 `value` 之间的映射，实现高效的元素查询。具体而言，我们向哈希表中输入一个键 `key` ，则可以在 $O(1)$ 时间内获取对应的值 `value` 。"
+      ],
+      "text": "<u>哈希表（hash table）</u>，又称<u>散列表</u>，它通过建立键 `key` 与值 `value` 之间的映射，实现高效的元素查询。具体而言，我们向哈希表中输入一个键 `key` ，则可以在 $O(1)$ 时间内获取对应的值 `value` 。"
+    },
+    {
+      "id": "hash_collision",
+      "title": "哈希冲突",
+      "source_file": "data/knowledge/hello-algo-v0/documents/hash_collision.md",
+      "source_url": "https://github.com/krahets/hello-algo/blob/350f483801b2badb95180047aa82cadb825852a2/docs/chapter_hashing/hash_collision.md",
+      "source_sha256": "a680457871d5fddba763a65857ed0328e82de90a3cc97d50e4297e6582403b60",
+      "excerpts": [
+        "上一节提到，**通常情况下哈希函数的输入空间远大于输出空间**，因此理论上哈希冲突是不可避免的。比如，输入空间为全体整数，输出空间为数组容量大小，则必然有多个整数映射至同一桶索引。",
+        "在原始哈希表中，每个桶仅能存储一个键值对。<u>链式地址（separate chaining）</u>将单个元素转换为链表，将键值对作为链表节点，将所有发生冲突的键值对都存储在同一链表中。下图展示了一个链式地址哈希表的例子。"
+      ],
+      "text": "上一节提到，**通常情况下哈希函数的输入空间远大于输出空间**，因此理论上哈希冲突是不可避免的。比如，输入空间为全体整数，输出空间为数组容量大小，则必然有多个整数映射至同一桶索引。\n\n在原始哈希表中，每个桶仅能存储一个键值对。<u>链式地址（separate chaining）</u>将单个元素转换为链表，将键值对作为链表节点，将所有发生冲突的键值对都存储在同一链表中。下图展示了一个链式地址哈希表的例子。"
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q01",
+      "question": "哪种数据结构把相同类型的元素放在连续内存中？",
+      "expected_ids": [
+        "array"
+      ],
+      "type": "answerable"
+    },
+    {
+      "id": "Q02",
+      "question": "我已经知道下标，需要快速读取对应元素，应使用哪种结构？",
+      "expected_ids": [
+        "array"
+      ],
+      "type": "answerable"
+    },
+    {
+      "id": "Q03",
+      "question": "哪种结构用引用连接节点，节点不需要占用连续内存？",
+      "expected_ids": [
+        "linked_list"
+      ],
+      "type": "answerable"
+    },
+    {
+      "id": "Q04",
+      "question": "后放进去的东西反而先取出来，这属于什么结构？",
+      "expected_ids": [
+        "stack"
+      ],
+      "type": "answerable"
+    },
+    {
+      "id": "Q05",
+      "question": "先排队的先处理，后来的在末尾等待，对应什么结构？",
+      "expected_ids": [
+        "queue"
+      ],
+      "type": "answerable"
+    },
+    {
+      "id": "Q06",
+      "question": "需要通过一个键找到对应的值，应使用什么数据结构？",
+      "expected_ids": [
+        "hash_map"
+      ],
+      "type": "answerable"
+    },
+    {
+      "id": "Q07",
+      "question": "多个键映射到同一位置，能用链表组织这些键值对吗？",
+      "expected_ids": [
+        "hash_collision"
+      ],
+      "type": "answerable"
+    },
+    {
+      "id": "Q08",
+      "question": "像一摞盘子，只能先取最上面那个，是什么结构？",
+      "expected_ids": [
+        "stack"
+      ],
+      "type": "answerable"
+    },
+    {
+      "id": "Q09",
+      "question": "快速排序如何选择基准元素？",
+      "expected_ids": [],
+      "type": "unanswerable_observation"
+    },
+    {
+      "id": "Q10",
+      "question": "今天上海会下雨吗？",
+      "expected_ids": [],
+      "type": "unanswerable_observation"
+    }
+  ],
+  "notes": [
+    "资料仅为原文摘录，不代表六篇文档的完整索引。",
+    "无答案题只观察近邻分数，不设置拒答阈值，不计入 Hit@K。",
+    "这是人工选择的开发样本，成绩不代表正式 RAG 能力。"
+  ]
+}

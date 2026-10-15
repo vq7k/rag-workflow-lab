@@ -1,0 +1,32 @@
+[
+  {
+    "id": "net-vpn-connect",
+    "title": "Connect to a VPN",
+    "source_url": "https://github.com/GNOME/gnome-user-docs/blob/master/gnome-help/C/net-vpn-connect.page",
+    "fetched_at": "2026-10-15T06:09:44.685251+00:00",
+    "source_sha256": "50f2e1d7b79e9dd90084d4d77b9906effd9d8dc93269aa78f7db161224a17d33",
+    "import_file": "knowledge/import/net-vpn-connect.md",
+    "language": "en",
+    "scope": "GNOME/Linux public documentation; workflow validation only"
+  },
+  {
+    "id": "net-wireless-troubleshooting",
+    "title": "Wireless network troubleshooter",
+    "source_url": "https://github.com/GNOME/gnome-user-docs/blob/master/gnome-help/C/net-wireless-troubleshooting.page",
+    "fetched_at": "2026-10-15T06:09:44.685633+00:00",
+    "source_sha256": "4783a6d5b843e52d4405324b7ad6a98c3a079f2df9ae78146d69d25a5160f5a1",
+    "import_file": "knowledge/import/net-wireless-troubleshooting.md",
+    "language": "en",
+    "scope": "GNOME/Linux public documentation; workflow validation only"
+  },
+  {
+    "id": "printing-setup",
+    "title": "Set up a local printer",
+    "source_url": "https://github.com/GNOME/gnome-user-docs/blob/master/gnome-help/C/printing-setup.page",
+    "fetched_at": "2026-10-15T06:09:44.685864+00:00",
+    "source_sha256": "927b748467893fbd9cf80ef0302387d358e4ae58808a4b546b35fa269407ff66",
+    "import_file": "knowledge/import/printing-setup.md",
+    "language": "en",
+    "scope": "GNOME/Linux public documentation; workflow validation only"
+  }
+]

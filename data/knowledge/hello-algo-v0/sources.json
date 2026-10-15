@@ -1,0 +1,50 @@
+{
+  "repository": "https://github.com/krahets/hello-algo",
+  "commit": "350f483801b2badb95180047aa82cadb825852a2",
+  "retrieved_at": "2026-10-15T06:21:19.656735+00:00",
+  "license": "CC BY-NC-SA 4.0",
+  "documents": [
+    {
+      "title": "数组",
+      "file": "documents/array.md",
+      "source": "https://github.com/krahets/hello-algo/blob/350f483801b2badb95180047aa82cadb825852a2/docs/chapter_array_and_linkedlist/array.md",
+      "sha256": "cdcb51bac0618630e6ee0af71261e226c0d234238e2431e033f103e8bd18f977",
+      "bytes": 9364
+    },
+    {
+      "title": "链表",
+      "file": "documents/linked_list.md",
+      "source": "https://github.com/krahets/hello-algo/blob/350f483801b2badb95180047aa82cadb825852a2/docs/chapter_array_and_linkedlist/linked_list.md",
+      "sha256": "889e34c11168cb33fcc540511358adeca7cced1222f9b2b53474f18b5fac436b",
+      "bytes": 23006
+    },
+    {
+      "title": "栈",
+      "file": "documents/stack.md",
+      "source": "https://github.com/krahets/hello-algo/blob/350f483801b2badb95180047aa82cadb825852a2/docs/chapter_stack_and_queue/stack.md",
+      "sha256": "3c0ff86f2fd2e2a625fa79a319c662d42a4cae365fd678e70441cf9ccbe3d54e",
+      "bytes": 13558
+    },
+    {
+      "title": "队列",
+      "file": "documents/queue.md",
+      "source": "https://github.com/krahets/hello-algo/blob/350f483801b2badb95180047aa82cadb825852a2/docs/chapter_stack_and_queue/queue.md",
+      "sha256": "e073581754aa73eb8c83fe3abedc9cfedab0451de424a81990b7438995e7be7c",
+      "bytes": 13116
+    },
+    {
+      "title": "哈希表",
+      "file": "documents/hash_map.md",
+      "source": "https://github.com/krahets/hello-algo/blob/350f483801b2badb95180047aa82cadb825852a2/docs/chapter_hashing/hash_map.md",
+      "sha256": "0672153b1a3f261206fafc6203d691831fe4fc52dbfdb93a9311aefdf0301f9e",
+      "bytes": 19721
+    },
+    {
+      "title": "哈希冲突",
+      "file": "documents/hash_collision.md",
+      "source": "https://github.com/krahets/hello-algo/blob/350f483801b2badb95180047aa82cadb825852a2/docs/chapter_hashing/hash_collision.md",
+      "sha256": "a680457871d5fddba763a65857ed0328e82de90a3cc97d50e4297e6582403b60",
+      "bytes": 7992
+    }
+  ]
+}

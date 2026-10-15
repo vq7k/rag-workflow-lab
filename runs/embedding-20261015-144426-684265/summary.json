@@ -1,0 +1,452 @@
+{
+  "status": "completed",
+  "started_at": "2026-10-15T06:44:26.684445+00:00",
+  "model": "bge-m3:latest",
+  "input_contract": "bge-m3-dense-v0",
+  "run_dir": "runs/embedding-20261015-144426-684265",
+  "scope": "中文摘录小样本检索；不是全文 RAG、拒答或生成模型验收",
+  "dataset_version": "embedding-smoke-v0",
+  "dataset_sha256": "da0db6547d2ce4bddfe71d8199797d6da17e357b6280263b83f0be71c017748b",
+  "provider": "Ollama",
+  "provider_version": {
+    "version": "0.35.1"
+  },
+  "model_metadata": {
+    "name": "bge-m3:latest",
+    "model": "bge-m3:latest",
+    "modified_at": "2026-10-15T14:34:18.865440452+08:00",
+    "size": 1157672605,
+    "digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "bert",
+      "families": [
+        "bert"
+      ],
+      "parameter_size": "566.70M",
+      "quantization_level": "F16",
+      "context_length": 8192,
+      "embedding_length": 1024
+    },
+    "capabilities": [
+      "embedding"
+    ]
+  },
+  "dimensions": 1024,
+  "document_latency_s": 2.0704,
+  "query_latency_s": 0.194,
+  "scored_questions": 8,
+  "unanswerable_observations": 2,
+  "hit_at_1": 0.875,
+  "hit_at_3": 1.0,
+  "results": [
+    {
+      "id": "Q01",
+      "question": "哪种数据结构把相同类型的元素放在连续内存中？",
+      "expected_ids": [
+        "array"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "ranking": [
+        {
+          "id": "array",
+          "title": "数组",
+          "score": 0.6399206221042002
+        },
+        {
+          "id": "linked_list",
+          "title": "链表",
+          "score": 0.6130677827789625
+        },
+        {
+          "id": "stack",
+          "title": "栈",
+          "score": 0.6016326406788066
+        },
+        {
+          "id": "hash_collision",
+          "title": "哈希冲突",
+          "score": 0.5619004185293021
+        },
+        {
+          "id": "queue",
+          "title": "队列",
+          "score": 0.5194489942948494
+        },
+        {
+          "id": "hash_map",
+          "title": "哈希表",
+          "score": 0.48586732325374604
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "question": "我已经知道下标，需要快速读取对应元素，应使用哪种结构？",
+      "expected_ids": [
+        "array"
+      ],
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "ranking": [
+        {
+          "id": "hash_map",
+          "title": "哈希表",
+          "score": 0.5512792779995758
+        },
+        {
+          "id": "linked_list",
+          "title": "链表",
+          "score": 0.5457697005060098
+        },
+        {
+          "id": "array",
+          "title": "数组",
+          "score": 0.5375596048730836
+        },
+        {
+          "id": "stack",
+          "title": "栈",
+          "score": 0.536216232256606
+        },
+        {
+          "id": "hash_collision",
+          "title": "哈希冲突",
+          "score": 0.5209417151552179
+        },
+        {
+          "id": "queue",
+          "title": "队列",
+          "score": 0.4459554987390211
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "question": "哪种结构用引用连接节点，节点不需要占用连续内存？",
+      "expected_ids": [
+        "linked_list"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "ranking": [
+        {
+          "id": "linked_list",
+          "title": "链表",
+          "score": 0.6313116465254893
+        },
+        {
+          "id": "hash_collision",
+          "title": "哈希冲突",
+          "score": 0.5317727186246716
+        },
+        {
+          "id": "array",
+          "title": "数组",
+          "score": 0.5292079289179856
+        },
+        {
+          "id": "stack",
+          "title": "栈",
+          "score": 0.5191925428030147
+        },
+        {
+          "id": "hash_map",
+          "title": "哈希表",
+          "score": 0.44950410384258005
+        },
+        {
+          "id": "queue",
+          "title": "队列",
+          "score": 0.41776474605181113
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "question": "后放进去的东西反而先取出来，这属于什么结构？",
+      "expected_ids": [
+        "stack"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "ranking": [
+        {
+          "id": "stack",
+          "title": "栈",
+          "score": 0.6147319507637806
+        },
+        {
+          "id": "queue",
+          "title": "队列",
+          "score": 0.5294581881220655
+        },
+        {
+          "id": "array",
+          "title": "数组",
+          "score": 0.5175475555462483
+        },
+        {
+          "id": "hash_collision",
+          "title": "哈希冲突",
+          "score": 0.5014026878524819
+        },
+        {
+          "id": "linked_list",
+          "title": "链表",
+          "score": 0.4923637495169251
+        },
+        {
+          "id": "hash_map",
+          "title": "哈希表",
+          "score": 0.4194135623029048
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "question": "先排队的先处理，后来的在末尾等待，对应什么结构？",
+      "expected_ids": [
+        "queue"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "ranking": [
+        {
+          "id": "queue",
+          "title": "队列",
+          "score": 0.6420949063249823
+        },
+        {
+          "id": "stack",
+          "title": "栈",
+          "score": 0.5978235347595999
+        },
+        {
+          "id": "array",
+          "title": "数组",
+          "score": 0.5310152716747053
+        },
+        {
+          "id": "linked_list",
+          "title": "链表",
+          "score": 0.5119904828324086
+        },
+        {
+          "id": "hash_collision",
+          "title": "哈希冲突",
+          "score": 0.47651666091205175
+        },
+        {
+          "id": "hash_map",
+          "title": "哈希表",
+          "score": 0.42868946028812444
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "question": "需要通过一个键找到对应的值，应使用什么数据结构？",
+      "expected_ids": [
+        "hash_map"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "ranking": [
+        {
+          "id": "hash_map",
+          "title": "哈希表",
+          "score": 0.618185841607398
+        },
+        {
+          "id": "hash_collision",
+          "title": "哈希冲突",
+          "score": 0.5950856385818422
+        },
+        {
+          "id": "array",
+          "title": "数组",
+          "score": 0.5910784675984151
+        },
+        {
+          "id": "stack",
+          "title": "栈",
+          "score": 0.5863299457103922
+        },
+        {
+          "id": "linked_list",
+          "title": "链表",
+          "score": 0.5854490614075315
+        },
+        {
+          "id": "queue",
+          "title": "队列",
+          "score": 0.4669230437269029
+        }
+      ]
+    },
+    {
+      "id": "Q07",
+      "question": "多个键映射到同一位置，能用链表组织这些键值对吗？",
+      "expected_ids": [
+        "hash_collision"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "ranking": [
+        {
+          "id": "hash_collision",
+          "title": "哈希冲突",
+          "score": 0.6494129115980294
+        },
+        {
+          "id": "linked_list",
+          "title": "链表",
+          "score": 0.6033584502489564
+        },
+        {
+          "id": "hash_map",
+          "title": "哈希表",
+          "score": 0.5372695580706206
+        },
+        {
+          "id": "array",
+          "title": "数组",
+          "score": 0.5190154702404879
+        },
+        {
+          "id": "stack",
+          "title": "栈",
+          "score": 0.4751305693135756
+        },
+        {
+          "id": "queue",
+          "title": "队列",
+          "score": 0.4062802155751374
+        }
+      ]
+    },
+    {
+      "id": "Q08",
+      "question": "像一摞盘子，只能先取最上面那个，是什么结构？",
+      "expected_ids": [
+        "stack"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "ranking": [
+        {
+          "id": "stack",
+          "title": "栈",
+          "score": 0.6031079876786178
+        },
+        {
+          "id": "array",
+          "title": "数组",
+          "score": 0.5025279185119788
+        },
+        {
+          "id": "linked_list",
+          "title": "链表",
+          "score": 0.5005824582559538
+        },
+        {
+          "id": "queue",
+          "title": "队列",
+          "score": 0.49371330194754426
+        },
+        {
+          "id": "hash_collision",
+          "title": "哈希冲突",
+          "score": 0.46960410301896816
+        },
+        {
+          "id": "hash_map",
+          "title": "哈希表",
+          "score": 0.4493453622483997
+        }
+      ]
+    },
+    {
+      "id": "Q09",
+      "question": "快速排序如何选择基准元素？",
+      "expected_ids": [],
+      "hit_at_1": null,
+      "hit_at_3": null,
+      "ranking": [
+        {
+          "id": "array",
+          "title": "数组",
+          "score": 0.49854087105720113
+        },
+        {
+          "id": "hash_map",
+          "title": "哈希表",
+          "score": 0.49792946501531554
+        },
+        {
+          "id": "hash_collision",
+          "title": "哈希冲突",
+          "score": 0.4755127576793544
+        },
+        {
+          "id": "stack",
+          "title": "栈",
+          "score": 0.4493822418180887
+        },
+        {
+          "id": "linked_list",
+          "title": "链表",
+          "score": 0.42704551514285355
+        },
+        {
+          "id": "queue",
+          "title": "队列",
+          "score": 0.41085960451130776
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "question": "今天上海会下雨吗？",
+      "expected_ids": [],
+      "hit_at_1": null,
+      "hit_at_3": null,
+      "ranking": [
+        {
+          "id": "queue",
+          "title": "队列",
+          "score": 0.3402754746180043
+        },
+        {
+          "id": "linked_list",
+          "title": "链表",
+          "score": 0.3376769567890192
+        },
+        {
+          "id": "hash_collision",
+          "title": "哈希冲突",
+          "score": 0.32719296398274683
+        },
+        {
+          "id": "array",
+          "title": "数组",
+          "score": 0.3264056586590317
+        },
+        {
+          "id": "hash_map",
+          "title": "哈希表",
+          "score": 0.31878926893582166
+        },
+        {
+          "id": "stack",
+          "title": "栈",
+          "score": 0.31848823239853796
+        }
+      ]
+    }
+  ],
+  "total_latency_s": 2.3249
+}

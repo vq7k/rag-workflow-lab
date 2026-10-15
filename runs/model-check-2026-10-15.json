@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-10-15T06:29:21.382495+00:00",
+  "testset_version": "hello-algo-connectivity-v0",
+  "prompt_version": "model-smoke-v0",
+  "scope": "Provider availability only; no Dify app created, no documents imported, no settings changed",
+  "generation": {
+    "provider": "langgenius/deepseek/deepseek",
+    "model": "deepseek-chat",
+    "path": "Dify credential loaded in memory; direct provider request through host.docker.internal:7890; not Dify plugin inference",
+    "prompt": "只根据以下资料回答，不补充外部知识。资料：栈遵循先入后出；队列遵循先入先出。问题：栈和队列的出入顺序有什么区别？用一句中文回答。",
+    "result": "failed",
+    "http_status": 402,
+    "error": "HTTP Error 402: Payment Required",
+    "latency_s": 0.56,
+    "quality_score": null
+  },
+  "embedding": {
+    "provider": "Ollama",
+    "service_version": "0.35.1",
+    "model": "nomic-embed-text:latest",
+    "inputs": [
+      "search_document: 栈遵循先入后出，队列遵循先入先出。",
+      "search_query: 栈和队列的顺序有何区别？"
+    ],
+    "result": "inference_executed",
+    "vector_count": 2,
+    "dimensions": [
+      768,
+      768
+    ],
+    "all_values_finite": true,
+    "sample_values": [
+      [
+        0.028074553,
+        -0.004745991,
+        -0.11540382
+      ],
+      [
+        0.0041026804,
+        0.031936582,
+        -0.14579424
+      ]
+    ],
+    "full_vectors_retained": false,
+    "latency_s": 1.281,
+    "prompt_eval_count": 41,
+    "retrieval_quality": "not evaluated",
+    "dify_integration": "not configured"
+  },
+  "conclusion": "Generation blocked by provider HTTP 402; embedding API executed, Chinese retrieval quality and Dify integration not evaluated."
+}

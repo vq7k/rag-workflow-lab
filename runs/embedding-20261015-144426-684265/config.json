@@ -1,0 +1,8 @@
+{
+  "model": "bge-m3:latest",
+  "timeout_s": 120,
+  "endpoint": "http://127.0.0.1:11434",
+  "truncate": false,
+  "input_contract": "bge-m3-dense-v0",
+  "expected_dimensions": 1024
+}
