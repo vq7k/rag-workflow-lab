@@ -1,0 +1,10 @@
+{
+  "query": "数组实现的栈为什么有时入栈会变慢？链表实现会遇到同样的问题吗？",
+  "retrieval_model": {
+    "search_method": "semantic_search",
+    "reranking_enable": false,
+    "reranking_mode": "weighted_score",
+    "top_k": 3,
+    "score_threshold_enabled": false
+  }
+}

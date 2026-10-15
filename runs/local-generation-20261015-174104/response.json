@@ -1,0 +1,17 @@
+{
+  "model": "qwen38-ms-8bit:latest",
+  "created_at": "2026-10-15T09:41:36.744436Z",
+  "message": {
+    "role": "assistant",
+    "content": "这叫做栈。"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 32391262375,
+  "load_duration": 24112122959,
+  "prompt_eval_count": 73,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 7396816042,
+  "eval_count": 4,
+  "eval_duration": 698476709
+}

@@ -1,0 +1,126 @@
+{
+  "test_set": "stack-retrieval-v0",
+  "provider": "Ollama",
+  "model": "bge-m3:latest",
+  "model_digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+  "evidence": "Dify UI real retrieval results; displayed scores rounded to two decimals; no raw provider trace or latency captured",
+  "config": {
+    "method": "hybrid",
+    "fusion": "weighted_score",
+    "semantic_weight": 0.7,
+    "keyword_weight": 0.3,
+    "top_k": 3,
+    "rerank_model": null,
+    "score_threshold_enabled": false
+  },
+  "results": [
+    {
+      "id": "S01",
+      "question": "后放进去的东西反而先取出来，这属于什么结构？",
+      "expected_segments": [
+        1
+      ],
+      "answer_evidence": "栈遵循先入后出逻辑。",
+      "results": [
+        {
+          "rank": 1,
+          "segment": 1,
+          "score_displayed": 0.48
+        },
+        {
+          "rank": 2,
+          "segment": 3,
+          "score_displayed": 0.39
+        },
+        {
+          "rank": 3,
+          "segment": 4,
+          "score_displayed": 0.35
+        }
+      ],
+      "expected_rank": 1
+    },
+    {
+      "id": "S02",
+      "question": "Python 用列表作为栈时，如何查看栈顶、弹出元素并判断是否为空？",
+      "expected_segments": [
+        2
+      ],
+      "answer_evidence": "stack[-1]、stack.pop()、len(stack) == 0。",
+      "results": [
+        {
+          "rank": 1,
+          "segment": 2,
+          "score_displayed": 0.54
+        },
+        {
+          "rank": 2,
+          "segment": 3,
+          "score_displayed": 0.48
+        },
+        {
+          "rank": 3,
+          "segment": 1,
+          "score_displayed": 0.47
+        }
+      ],
+      "expected_rank": 1
+    },
+    {
+      "id": "S03",
+      "question": "数组实现的栈为什么有时入栈会变慢？链表实现会遇到同样的问题吗？",
+      "expected_segments": [
+        4
+      ],
+      "answer_evidence": "数组超容量时触发扩容，单次 O(n)；链表无同样扩容问题，但有节点初始化和指针操作开销。",
+      "results": [
+        {
+          "rank": 1,
+          "segment": 4,
+          "score_displayed": 0.61
+        },
+        {
+          "rank": 2,
+          "segment": 3,
+          "score_displayed": 0.58
+        },
+        {
+          "rank": 3,
+          "segment": 1,
+          "score_displayed": 0.45
+        }
+      ],
+      "expected_rank": 1
+    },
+    {
+      "id": "S04",
+      "question": "快速排序如何选择基准元素？",
+      "expected_segments": [],
+      "answer_evidence": null,
+      "type": "unanswerable_observation",
+      "results": [
+        {
+          "rank": 1,
+          "segment": 1,
+          "score_displayed": 0.36
+        },
+        {
+          "rank": 2,
+          "segment": 3,
+          "score_displayed": 0.36
+        },
+        {
+          "rank": 3,
+          "segment": 2,
+          "score_displayed": 0.33
+        }
+      ],
+      "expected_rank": null
+    }
+  ],
+  "metrics": {
+    "answerable_count": 3,
+    "hit_at_1": 1.0,
+    "hit_at_3": 1.0
+  }
+}

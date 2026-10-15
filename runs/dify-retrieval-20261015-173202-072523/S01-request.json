@@ -1,0 +1,10 @@
+{
+  "query": "后放进去的东西反而先取出来，这属于什么结构？",
+  "retrieval_model": {
+    "search_method": "semantic_search",
+    "reranking_enable": false,
+    "reranking_mode": "weighted_score",
+    "top_k": 3,
+    "score_threshold_enabled": false
+  }
+}

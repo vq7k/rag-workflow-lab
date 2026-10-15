@@ -1,5 +1,9 @@
 # 确定性测试
 
-后续仅为有必要验证的输入校验、相似度计算、结果解析等逻辑添加测试。真实模型验收由 `scripts/` 的实验入口执行，证据保存到 `runs/`。
+从项目根目录运行：
 
-当前没有实现可测试的业务代码，也没有测试用例。
+```shell
+.venv/bin/python -m unittest discover -s tests -v
+```
+
+`test_retrieval.py` 校验检索评分契约：文档身份与排名、未命中与无答案、失败请求分母。它不使用模拟结果证明智能能力。真实 Dify 检索由 `scripts/evaluate_dify_retrieval.py` 执行，证据保存至 `runs/`。

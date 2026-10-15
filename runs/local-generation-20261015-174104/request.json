@@ -1,0 +1,20 @@
+{
+  "model": "qwen38-ms-8bit:latest",
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是知识库助手。仅根据提供的资料回答，资料不足时明确说明无法回答。用中文简洁回答。"
+    },
+    {
+      "role": "user",
+      "content": "资料：栈是一种遵循先入后出逻辑的线性数据结构。\n问题：后放进去的东西先取出来，这叫什么结构？请只用一句话回答。"
+    }
+  ],
+  "stream": false,
+  "think": false,
+  "options": {
+    "temperature": 0,
+    "num_predict": 256,
+    "num_ctx": 8192
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "provider": "Ollama",
+  "provider_version": {
+    "version": "0.35.1"
+  },
+  "model_info": {
+    "name": "qwen38-ms-8bit:latest",
+    "model": "qwen38-ms-8bit:latest",
+    "modified_at": "2026-10-03T12:48:14.202810292+08:00",
+    "size": 29527967139,
+    "digest": "6893e5419c74d14338c77501395a2dc1d4180b30e9f03f9af898d5932ebeb483",
+    "details": {
+      "parent_model": "",
+      "format": "safetensors",
+      "family": "",
+      "families": null,
+      "parameter_size": "",
+      "quantization_level": "int8"
+    },
+    "capabilities": [
+      "completion",
+      "vision",
+      "tools",
+      "thinking"
+    ]
+  },
+  "prompt_version": "grounded-smoke-v1",
+  "test_set_version": "single-grounded-stack-v0",
+  "scope": "单题本地真实生成，非完整 RAG 验收"
+}

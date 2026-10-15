@@ -1,0 +1,121 @@
+{
+  "query": {
+    "content": "Python 用列表作为栈时，如何查看栈顶、弹出元素并判断是否为空？"
+  },
+  "records": [
+    {
+      "segment": {
+        "id": "12c4174f-64ea-4a24-be8f-5710bdc4c848",
+        "position": 2,
+        "document_id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+        "content": "栈的常用操作\n栈的常用操作如下表所示，具体的方法名需要根据所使用的编程语言来确定。在此，我们以常见的 `push()`、`pop()`、`peek()` 命名为例。\n\n| 方法 | 描述 | 时间复杂度 |\n|---|---|---|\n| `push()` | 元素入栈（添加至栈顶） | $O(1)$ |\n| `pop()` | 栈顶元素出栈 | $O(1)$ |\n| `peek()` | 访问栈顶元素 | $O(1)$ |\n\n通常情况下，我们可以直接使用编程语言内置的栈类。然而，某些语言可能没有专门提供栈类，这时我们可以将该语言的“数组”或“链表”当作栈来使用，并在程序逻辑上忽略与栈无关的操作。\n\n**Python 列表的栈操作示例**\n\n```python\n# 初始化栈\n# Python 没有内置的栈类，可以把 list 当作栈来使用\nstack: list[int] = []\n\n# 元素入栈\nstack.append(1)\nstack.append(3)\nstack.append(2)\nstack.append(5)\nstack.append(4)\n\n# 访问栈顶元素\npeek: int = stack[-1]\n\n# 元素出栈\npop: int = stack.pop()\n\n# 获取栈的长度\nsize: int = len(stack)\n\n# 判断是否为空\nis_empty: bool = len(stack) == 0\n```",
+        "sign_content": "栈的常用操作\n栈的常用操作如下表所示，具体的方法名需要根据所使用的编程语言来确定。在此，我们以常见的 `push()`、`pop()`、`peek()` 命名为例。\n\n| 方法 | 描述 | 时间复杂度 |\n|---|---|---|\n| `push()` | 元素入栈（添加至栈顶） | $O(1)$ |\n| `pop()` | 栈顶元素出栈 | $O(1)$ |\n| `peek()` | 访问栈顶元素 | $O(1)$ |\n\n通常情况下，我们可以直接使用编程语言内置的栈类。然而，某些语言可能没有专门提供栈类，这时我们可以将该语言的“数组”或“链表”当作栈来使用，并在程序逻辑上忽略与栈无关的操作。\n\n**Python 列表的栈操作示例**\n\n```python\n# 初始化栈\n# Python 没有内置的栈类，可以把 list 当作栈来使用\nstack: list[int] = []\n\n# 元素入栈\nstack.append(1)\nstack.append(3)\nstack.append(2)\nstack.append(5)\nstack.append(4)\n\n# 访问栈顶元素\npeek: int = stack[-1]\n\n# 元素出栈\npop: int = stack.pop()\n\n# 获取栈的长度\nsize: int = len(stack)\n\n# 判断是否为空\nis_empty: bool = len(stack) == 0\n```",
+        "answer": null,
+        "word_count": 627,
+        "tokens": 697,
+        "keywords": null,
+        "index_node_id": "520ff242-2fa6-4f5b-ab97-232fdfed0168",
+        "index_node_hash": "f842e5159b9dfeccd50af0f90be57fc71b8c9d9579c6c09b99da77138af9aed0",
+        "hit_count": 0,
+        "enabled": true,
+        "disabled_at": null,
+        "disabled_by": null,
+        "status": "completed",
+        "created_by": "bfa58ad1-a67f-4bea-8698-d35a3a4020bd",
+        "created_at": 1792053894,
+        "indexing_at": 1792053894,
+        "completed_at": 1792053898,
+        "error": null,
+        "stopped_at": null,
+        "document": {
+          "id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+          "data_source_type": "upload_file",
+          "name": "stack-v2.md",
+          "doc_type": null,
+          "doc_metadata": null
+        }
+      },
+      "child_chunks": null,
+      "score": 0.540996036969005,
+      "tsne_position": null,
+      "files": null,
+      "summary": null
+    },
+    {
+      "segment": {
+        "id": "d5693f14-20dc-4c65-a486-c35a1faf3357",
+        "position": 3,
+        "document_id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+        "content": "栈的实现\n栈遵循先入后出的原则，因此我们只能在栈顶添加或删除元素。然而，数组和链表都可以在任意位置添加和删除元素，**因此栈可以视为一种受限制的数组或链表**。换句话说，我们可以“屏蔽”数组或链表的部分无关操作，使其对外表现的逻辑符合栈的特性。\n\n**基于链表的实现**\n\n使用链表实现栈时，我们可以将链表的头节点视为栈顶，尾节点视为栈底。\n\n对于入栈操作，我们只需将元素插入链表头部，这种节点插入方法被称为“头插法”。而对于出栈操作，只需将头节点从链表中删除即可。\n\n**基于数组的实现**\n\n使用数组实现栈时，我们可以将数组的尾部作为栈顶。入栈与出栈操作分别对应在数组尾部添加元素与删除元素，时间复杂度都为 $O(1)$。\n\n由于入栈的元素可能会源源不断地增加，因此我们可以使用动态数组，这样就无须自行处理数组扩容问题。",
+        "sign_content": "栈的实现\n栈遵循先入后出的原则，因此我们只能在栈顶添加或删除元素。然而，数组和链表都可以在任意位置添加和删除元素，**因此栈可以视为一种受限制的数组或链表**。换句话说，我们可以“屏蔽”数组或链表的部分无关操作，使其对外表现的逻辑符合栈的特性。\n\n**基于链表的实现**\n\n使用链表实现栈时，我们可以将链表的头节点视为栈顶，尾节点视为栈底。\n\n对于入栈操作，我们只需将元素插入链表头部，这种节点插入方法被称为“头插法”。而对于出栈操作，只需将头节点从链表中删除即可。\n\n**基于数组的实现**\n\n使用数组实现栈时，我们可以将数组的尾部作为栈顶。入栈与出栈操作分别对应在数组尾部添加元素与删除元素，时间复杂度都为 $O(1)$。\n\n由于入栈的元素可能会源源不断地增加，因此我们可以使用动态数组，这样就无须自行处理数组扩容问题。",
+        "answer": null,
+        "word_count": 362,
+        "tokens": 741,
+        "keywords": null,
+        "index_node_id": "ad536c3d-7b5d-4c87-95c9-162bd1d94550",
+        "index_node_hash": "70d79a3136f651424f5df58f560cf52179f6e627440d103c219b05f651c72dda",
+        "hit_count": 0,
+        "enabled": true,
+        "disabled_at": null,
+        "disabled_by": null,
+        "status": "completed",
+        "created_by": "bfa58ad1-a67f-4bea-8698-d35a3a4020bd",
+        "created_at": 1792053894,
+        "indexing_at": 1792053894,
+        "completed_at": 1792053898,
+        "error": null,
+        "stopped_at": null,
+        "document": {
+          "id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+          "data_source_type": "upload_file",
+          "name": "stack-v2.md",
+          "doc_type": null,
+          "doc_metadata": null
+        }
+      },
+      "child_chunks": null,
+      "score": 0.47986224609762174,
+      "tsne_position": null,
+      "files": null,
+      "summary": null
+    },
+    {
+      "segment": {
+        "id": "4c5f4fca-ff95-48be-b293-4943b90d89e2",
+        "position": 1,
+        "document_id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+        "content": "栈\n栈（stack）是一种遵循先入后出逻辑的线性数据结构。\n\n我们可以将栈类比为桌面上的一摞盘子，规定每次只能移动一个盘子，那么想取出底部的盘子，则需要先将上面的盘子依次移走。我们将盘子替换为各种类型的元素（如整数、字符、对象等），就得到了栈这种数据结构。\n\n我们把堆叠元素的顶部称为“栈顶”，底部称为“栈底”。将元素添加到栈顶的操作叫作“入栈”，删除栈顶元素的操作叫作“出栈”。",
+        "sign_content": "栈\n栈（stack）是一种遵循先入后出逻辑的线性数据结构。\n\n我们可以将栈类比为桌面上的一摞盘子，规定每次只能移动一个盘子，那么想取出底部的盘子，则需要先将上面的盘子依次移走。我们将盘子替换为各种类型的元素（如整数、字符、对象等），就得到了栈这种数据结构。\n\n我们把堆叠元素的顶部称为“栈顶”，底部称为“栈底”。将元素添加到栈顶的操作叫作“入栈”，删除栈顶元素的操作叫作“出栈”。",
+        "answer": null,
+        "word_count": 190,
+        "tokens": 392,
+        "keywords": null,
+        "index_node_id": "01c3c3a1-5f46-456b-ae53-260854fa1f24",
+        "index_node_hash": "9446d37bc1360b1266810a898d29ae4d0b29245eb6b39d83cab2ae990f3b9949",
+        "hit_count": 0,
+        "enabled": true,
+        "disabled_at": null,
+        "disabled_by": null,
+        "status": "completed",
+        "created_by": "bfa58ad1-a67f-4bea-8698-d35a3a4020bd",
+        "created_at": 1792053894,
+        "indexing_at": 1792053894,
+        "completed_at": 1792053898,
+        "error": null,
+        "stopped_at": null,
+        "document": {
+          "id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+          "data_source_type": "upload_file",
+          "name": "stack-v2.md",
+          "doc_type": null,
+          "doc_metadata": null
+        }
+      },
+      "child_chunks": null,
+      "score": 0.47139142210898816,
+      "tsne_position": null,
+      "files": null,
+      "summary": null
+    }
+  ]
+}

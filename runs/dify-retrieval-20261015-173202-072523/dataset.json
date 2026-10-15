@@ -1,0 +1,39 @@
+{
+  "version": "stack-retrieval-v0",
+  "purpose": "单篇文档开发小样本，非正式验收集；在查看结果前记录预期",
+  "source_file": "data/knowledge/hello-algo-v0/import/stack-v2.md",
+  "source_sha256": "c505cc3f832c9e8b61615349f801d0098b4e83a8387652d773f32015c2307e87",
+  "questions": [
+    {
+      "id": "S01",
+      "question": "后放进去的东西反而先取出来，这属于什么结构？",
+      "expected_segments": [
+        1
+      ],
+      "answer_evidence": "栈遵循先入后出逻辑。"
+    },
+    {
+      "id": "S02",
+      "question": "Python 用列表作为栈时，如何查看栈顶、弹出元素并判断是否为空？",
+      "expected_segments": [
+        2
+      ],
+      "answer_evidence": "stack[-1]、stack.pop()、len(stack) == 0。"
+    },
+    {
+      "id": "S03",
+      "question": "数组实现的栈为什么有时入栈会变慢？链表实现会遇到同样的问题吗？",
+      "expected_segments": [
+        4
+      ],
+      "answer_evidence": "数组超容量时触发扩容，单次 O(n)；链表无同样扩容问题，但有节点初始化和指针操作开销。"
+    },
+    {
+      "id": "S04",
+      "question": "快速排序如何选择基准元素？",
+      "expected_segments": [],
+      "answer_evidence": null,
+      "type": "unanswerable_observation"
+    }
+  ]
+}

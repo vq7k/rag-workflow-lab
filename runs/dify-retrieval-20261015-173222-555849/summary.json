@@ -1,0 +1,166 @@
+{
+  "status": "completed",
+  "started_at": "2026-10-15T09:32:22.556002+00:00",
+  "scope": "真实 Dify 检索；非生成回答或上线验收",
+  "rows": [
+    {
+      "id": "S01",
+      "question": "后放进去的东西反而先取出来，这属于什么结构？",
+      "expected_segments": [
+        1
+      ],
+      "answer_evidence": "栈遵循先入后出逻辑。",
+      "status": "ok",
+      "latency_s": 0.1214,
+      "expected_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "reciprocal_rank_at_3": 1.0,
+      "ranking": [
+        {
+          "rank": 1,
+          "segment_id": "4c5f4fca-ff95-48be-b293-4943b90d89e2",
+          "document_id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+          "position": 1,
+          "score": 0.4847883604982602
+        },
+        {
+          "rank": 2,
+          "segment_id": "d5693f14-20dc-4c65-a486-c35a1faf3357",
+          "document_id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+          "position": 3,
+          "score": 0.39240509271621704
+        },
+        {
+          "rank": 3,
+          "segment_id": "3dcc5433-1467-46c9-aa9c-7aceeec89a32",
+          "document_id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+          "position": 4,
+          "score": 0.34962995648384093
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "question": "Python 用列表作为栈时，如何查看栈顶、弹出元素并判断是否为空？",
+      "expected_segments": [
+        2
+      ],
+      "answer_evidence": "stack[-1]、stack.pop()、len(stack) == 0。",
+      "status": "ok",
+      "latency_s": 0.1229,
+      "expected_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "reciprocal_rank_at_3": 1.0,
+      "ranking": [
+        {
+          "rank": 1,
+          "segment_id": "12c4174f-64ea-4a24-be8f-5710bdc4c848",
+          "document_id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+          "position": 2,
+          "score": 0.540996036969005
+        },
+        {
+          "rank": 2,
+          "segment_id": "d5693f14-20dc-4c65-a486-c35a1faf3357",
+          "document_id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+          "position": 3,
+          "score": 0.47986224609762174
+        },
+        {
+          "rank": 3,
+          "segment_id": "4c5f4fca-ff95-48be-b293-4943b90d89e2",
+          "document_id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+          "position": 1,
+          "score": 0.47139142210898816
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "question": "数组实现的栈为什么有时入栈会变慢？链表实现会遇到同样的问题吗？",
+      "expected_segments": [
+        4
+      ],
+      "answer_evidence": "数组超容量时触发扩容，单次 O(n)；链表无同样扩容问题，但有节点初始化和指针操作开销。",
+      "status": "ok",
+      "latency_s": 0.1125,
+      "expected_rank": 1,
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "reciprocal_rank_at_3": 1.0,
+      "ranking": [
+        {
+          "rank": 1,
+          "segment_id": "3dcc5433-1467-46c9-aa9c-7aceeec89a32",
+          "document_id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+          "position": 4,
+          "score": 0.6052867957844204
+        },
+        {
+          "rank": 2,
+          "segment_id": "d5693f14-20dc-4c65-a486-c35a1faf3357",
+          "document_id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+          "position": 3,
+          "score": 0.5843519230540873
+        },
+        {
+          "rank": 3,
+          "segment_id": "4c5f4fca-ff95-48be-b293-4943b90d89e2",
+          "document_id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+          "position": 1,
+          "score": 0.44529587423227235
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "question": "快速排序如何选择基准元素？",
+      "expected_segments": [],
+      "answer_evidence": null,
+      "type": "unanswerable_observation",
+      "status": "ok",
+      "latency_s": 0.1106,
+      "expected_rank": null,
+      "hit_at_1": null,
+      "hit_at_3": null,
+      "reciprocal_rank_at_3": null,
+      "ranking": [
+        {
+          "rank": 1,
+          "segment_id": "4c5f4fca-ff95-48be-b293-4943b90d89e2",
+          "document_id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+          "position": 1,
+          "score": 0.36291740985753396
+        },
+        {
+          "rank": 2,
+          "segment_id": "d5693f14-20dc-4c65-a486-c35a1faf3357",
+          "document_id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+          "position": 3,
+          "score": 0.3571440615275043
+        },
+        {
+          "rank": 3,
+          "segment_id": "12c4174f-64ea-4a24-be8f-5710bdc4c848",
+          "document_id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+          "position": 2,
+          "score": 0.3250706515485242
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "questions": 4,
+    "answerable_questions": 3,
+    "unanswerable_observations": 1,
+    "hit_at_1": 1.0,
+    "hit_at_3": 1.0,
+    "mrr_at_3": 1.0,
+    "failure_rate": 0.0,
+    "latency_p50_s": 0.1125,
+    "latency_p95_s": 0.1229,
+    "latency_method": "nearest-rank; includes failed calls; cache/cold-start state unknown"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "api_base": "http://localhost/v1",
+  "dataset_id": "f1c8512b-edcc-4a2b-bf3f-8485833b9d73",
+  "document_id": "d1b12c73-f20e-4144-a22e-a9d062ad0182",
+  "model": "bge-m3:latest",
+  "provider": "langgenius/ollama/ollama",
+  "retrieval_model": {
+    "search_method": "semantic_search",
+    "reranking_enable": false,
+    "reranking_mode": "weighted_score",
+    "top_k": 3,
+    "score_threshold_enabled": false
+  },
+  "test_set_version": "stack-retrieval-v0",
+  "test_set_sha256": "d9db60ff6ad6513ef33c1dedc27ad7ad574ecc851747b7a0e0d30d1b1da6f323",
+  "source_sha256": "c505cc3f832c9e8b61615349f801d0098b4e83a8387652d773f32015c2307e87",
+  "scoring_contract": "single-target-position-v1",
+  "prompt_version": null,
+  "cache_state": "unknown"
+}

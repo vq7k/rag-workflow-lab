@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "latency_s": 32.41576375020668,
+  "content": "这叫做栈。",
+  "done": true,
+  "done_reason": "stop",
+  "eval_count": 4
+}
