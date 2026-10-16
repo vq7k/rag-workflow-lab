@@ -107,10 +107,10 @@ git diff --check
 
 七项确定性测试覆盖评分、失败计数、会话隔离与续传、不完整响应和断裂多轮处理，不调用模型。真实推理结论分别保存在 `runs/` 和上述评测记录中。
 
-`.env`、虚拟环境、IDE 配置与 Python 缓存已忽略；保留空值的 `.env.example`。提交前查看 `git status --short` 和实际 diff；公开分享不得新增公司文档、真实员工对话、凭据或个人路径。GitHub 仓库：[vq7k/it-helpdesk-rag](https://github.com/vq7k/it-helpdesk-rag)，首次上传使用私有可见性。
+`.env`、虚拟环境、IDE 配置与 Python 缓存已忽略；保留空值的 `.env.example`。提交前查看 `git status --short` 和实际 diff；公开分享不得新增公司文档、真实员工对话、凭据或个人路径。GitHub 仓库：[vq7k/it-helpdesk-rag](https://github.com/vq7k/it-helpdesk-rag)，公开提供代码、工程文档和公开语料实验记录。
 
 ## 资料许可与署名
 
 《Hello 算法》来自 [krahets/hello-algo](https://github.com/krahets/hello-algo)，固定版本、逐篇来源和哈希见 [sources.json](data/knowledge/hello-algo-v0/sources.json)，资料采用 [CC BY-NC-SA 4.0](data/knowledge/hello-algo-v0/LICENSE)。栈导入稿包含引用展开、清理和分块调整，改动记录见 [import/README.md](data/knowledge/hello-algo-v0/import/README.md)，派生资料沿用原许可要求。
 
-归档 GNOME 样本的来源见 [sources.json](archive/gnome-v0/knowledge/sources.json)，许可声明保留在[原始 legal.xml](archive/gnome-v0/knowledge/raw/legal.xml)。第三方资料与 Dify 的许可证各自适用；本仓库尚未为自有代码单独声明开源许可证，公开可见不等于授予任意使用权限。
+归档 GNOME 样本的来源见 [sources.json](archive/gnome-v0/knowledge/sources.json)，许可声明保留在[原始 legal.xml](archive/gnome-v0/knowledge/raw/legal.xml)。本仓库自有代码采用 [MIT License](LICENSE)。第三方资料、其派生导入稿及包含这些资料的实验输出继续遵守原许可，不因根目录 MIT 许可证而重新授权；Dify 的许可证另行适用。
