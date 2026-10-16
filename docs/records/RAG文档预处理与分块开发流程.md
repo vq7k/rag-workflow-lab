@@ -1,5 +1,7 @@
 # RAG 文档预处理与分块：开发流程与验收方法
 
+> 实验记录：保留本轮操作、观察与结果，不作为通用操作入口。通用步骤见 [开发 SOP](../sop/README.md)。
+
 ## 1. 环节定位
 
 **文档预处理与分块**属于 RAG 的数据摄取与索引构建流程（Ingestion Pipeline），负责把原始资料转换成可追溯、适合检索的知识片段。
@@ -135,7 +137,7 @@
 
 ### 5.1 已观察到的结果
 
-2026-10-15，使用 Dify 直接创建入口上传[原始 stack.md](../data/knowledge/hello-algo-v0/documents/stack.md)，查看分块预览：
+2026-10-15，使用 Dify 直接创建入口上传[原始 stack.md](../../data/knowledge/hello-algo-v0/documents/stack.md)，查看分块预览：
 
 - 通用模式，分隔符为 `\n\n`。
 - 最大长度为 1024 **字符**，重叠长度为 50 **字符**。
@@ -148,7 +150,7 @@
 
 ### 5.2 下一轮候选处理规则
 
-以下规则尚待用户确认及实际执行，不是已完成的清理结果：
+以下规则尚待经人工确认及实际执行，不是已完成的清理结果：
 
 1. 原文不动，另存导入稿，保留标题、来源、上游版本及许可信息。
 2. 将语言选项模板转换为标准 Markdown 结构；本轮若仅保留 Python，明确标记语言覆盖范围。
@@ -204,6 +206,6 @@
 - [官方：指定分段设置](https://docs.dify.ai/zh/self-host/use-dify/knowledge/create-knowledge/chunking-and-cleaning-text)
 - [官方：编排知识流水线](https://docs.dify.ai/zh/self-host/use-dify/knowledge/knowledge-pipeline/knowledge-pipeline-orchestration)
 - [官方：测试检索](https://docs.dify.ai/zh/self-host/use-dify/knowledge/test-retrieval)
-- [本项目：原始资料来源与固定版本](../data/knowledge/hello-algo-v0/sources.json)
+- [本项目：原始资料来源与固定版本](../../data/knowledge/hello-algo-v0/sources.json)
 
 模块契约、开发步骤与验收建议为本文的工程设计说明；Dify 页面观测仅限第 5 节记录的操作与结果，不代表对应自研模块已经实现。

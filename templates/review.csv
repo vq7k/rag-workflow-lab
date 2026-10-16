@@ -1,0 +1,4 @@
+case_id,turn,core,source,conditions,refusal,multiturn,overall,reason,reviewer
+EXAMPLE01,1,,,,,,pending,,
+EXAMPLE01,2,,,,,,pending,,
+EXAMPLE02,1,,,,,,pending,,

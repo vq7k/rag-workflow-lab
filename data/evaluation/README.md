@@ -4,4 +4,4 @@
 
 预期匹配是人工标注，未填写任何实测结果。开发样本不是最终验收集，不用于证明全文问答效果。旧 IT 题集保留在 `archive/gnome-v0/evaluation/`。
 
-生成评测预期：[stack-generation-v0.json](stack-generation-v0.json)，已整理四道单轮 S01–S04 与一组两轮 M01，版本为 stack-generation-v0。它包含必答要点、条件约束与原文证据；整理发生在查看现有输出之后，只用于开发回归，不作为独立验收集。实际回答与人工判断见[生成评测执行记录](../../docs/生成评测记录.md)，不混入预期数据。
+生成评测预期：[stack-generation-v0.json](stack-generation-v0.json)，已整理四道单轮 S01–S04 与一组两轮 M01，版本为 stack-generation-v0。它包含必答要点、条件约束与原文证据；整理发生在查看现有输出之后，只用于开发回归，不作为独立验收集。实际回答与人工判断见[生成评测执行记录](../../docs/records/生成评测记录.md)，不混入预期数据。

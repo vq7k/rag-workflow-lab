@@ -1,5 +1,7 @@
 # Dify 多轮对话支持与验证
 
+> 实验记录：保留本轮操作、观察与结果，不作为通用操作入口。通用步骤见 [开发 SOP](../sop/README.md)。
+
 ## 当前应用支持到哪里
 
 当前“算法知识库问答实验”为聊天助手，支持在同一会话中连续提问。2026-10-16 已使用本地 Ollama 真实运行一组两轮问答；没有修改应用配置、Prompt 或检索参数。
@@ -16,7 +18,7 @@
 
 ## 真实验证：multiturn-smoke-v0
 
-继续使用 `grounded-rag-v1`、`stack-v2.md` 六段知识库及混合检索 0.7／0.3、Top K=3、阈值关闭。模型为 `qwen38-ms-8bit:latest`，后台日志已核对模型名；本机 `/api/tags` 核对的 digest 记录在[运行配置](../runs/dify-multiturn-20261016/config.json)。这是新增的开发检查，不并入此前 S01–S04 单轮成绩。
+继续使用 `grounded-rag-v1`、`stack-v2.md` 六段知识库及混合检索 0.7／0.3、Top K=3、阈值关闭。模型为 `qwen38-ms-8bit:latest`，后台日志已核对模型名；本机 `/api/tags` 核对的 digest 记录在[运行配置](../../runs/dify-multiturn-20261016/config.json)。这是新增的开发检查，不并入此前 S01–S04 单轮成绩。
 
 | 轮次 | 实际问题 | 预期与观察 | 后台展示 |
 |---|---|---|---|
@@ -25,11 +27,11 @@
 
 后台两条记录属于同一会话 `b21621d6-ada9-4a7b-b567-8ef5301e3ae4`；时间分别为 2026-10-16 10:04:13、10:06:08。耗时为 Dify Pipeline 计时间隔，Token 是输入与输出合计，不能用于计算纯模型生成速度。本轮没有首 Token 或各阶段耗时，无法据此归因于模型、检索或其他处理阶段。
 
-![第一轮：栈的定义](screenshots/20261016-multiturn-turn1.png)
+![第一轮：栈的定义](../screenshots/20261016-multiturn-turn1.png)
 
-![第二轮：省略主题的追问](screenshots/20261016-multiturn-turn2.png)
+![第二轮：省略主题的追问](../screenshots/20261016-multiturn-turn2.png)
 
-[运行证据](../runs/dify-multiturn-20261016/README.md)保留两轮页面文本及后台记录。截图只覆盖当时可见区域，完整渲染文本以对应 `*-ui.txt` 为准；未采集 Provider 原始 HTTP 响应或第二轮完整 Prompt。
+[运行证据](../../runs/dify-multiturn-20261016/README.md)保留两轮页面文本及后台记录。截图只覆盖当时可见区域，完整渲染文本以对应 `*-ui.txt` 为准；未采集 Provider 原始 HTTP 响应或第二轮完整 Prompt。
 
 本次结论仅为“一组简单两轮连续追问可用”。知识库当前只有栈主题，即使省略主题仍可能检索到栈资料；没有无历史对照，不能把本次答对完全归因于历史记忆，也不能证明多主题知识库下的追问召回质量。
 
@@ -92,6 +94,6 @@ API 容器 `ENABLE_OTEL=false`；当前应用的 `apps.tracing` 为空，`trace_
 
 ### 留存文件与下一步
 
-[诊断数据](../runs/dify-multiturn-20261016/latency-investigation.json)、[插件时长](../runs/dify-multiturn-20261016/plugin-timings.json)、[Ollama 计时摘录](../runs/dify-multiturn-20261016/ollama-timing-excerpts.log)保留本次证据。插件摘录只保存时刻、调用类型、时长和 trace_id，排除账户、客户端地址及请求凭据。
+[诊断数据](../../runs/dify-multiturn-20261016/latency-investigation.json)、[插件时长](../../runs/dify-multiturn-20261016/plugin-timings.json)、[Ollama 计时摘录](../../runs/dify-multiturn-20261016/ollama-timing-excerpts.log)保留本次证据。插件摘录只保存时刻、调用类型、时长和 trace_id，排除账户、客户端地址及请求凭据。
 
 如需继续定位模型内部原因，下一步在相同模型与输入下采集一次冷／热调用的 Ollama 原始计时字段和流式首 Token 时间，再判断输入处理、生成或加载分别占多少。完整 RAG Trace 的启用方案仍属独立观测任务，本次未启用采集平台、未修改 Dify 源码，也未调整模型。

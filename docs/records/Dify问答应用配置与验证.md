@@ -1,5 +1,7 @@
 # Dify 问答应用配置与验证
 
+> 实验记录：保留本轮操作、观察与结果，不作为通用操作入口。通用步骤见 [开发 SOP](../sop/README.md)。
+
 ## 阶段与范围
 
 2026-10-15，从召回评测进入完整 RAG 单题验证：问题 → BGE-M3 向量化 → 混合检索 → 本地生成模型 → 回答与来源。当前已完成四题人工单次检查：S01 在编排预览，S02–S04 在发布入口；已完成本机测试配置的发布与刷新保存核查，尚未完成发布入口的真实问答验收。
@@ -19,7 +21,7 @@
 
 本次同时配置了两层：知识库的混合检索负责召回候选，应用的召回设置负责汇总与重排。只修改应用权重，不能将知识库原有的向量检索视为已切换混合检索。知识库设置保存后页面显示“修改成功”和“高质量 · 混合检索”；这是持久配置变更，会影响使用该知识库的应用。此前召回对照实验仍以各次运行的配置快照为准。
 
-[知识库检索配置](screenshots/20261015-dataset-hybrid-saved-config.png) · [应用召回配置](screenshots/20261015-app-retrieval.png) · [思考模式 False](screenshots/20261015-app-think-false.png) · [引用配置](screenshots/20261015-app-citation-config.png)
+[知识库检索配置](../screenshots/20261015-dataset-hybrid-saved-config.png) · [应用召回配置](../screenshots/20261015-app-retrieval.png) · [思考模式 False](../screenshots/20261015-app-think-false.png) · [引用配置](../screenshots/20261015-app-citation-config.png)
 
 ## Prompt：grounded-rag-v1
 
@@ -36,7 +38,7 @@ Prompt 约束属于模型行为要求，不是可靠的权限或拒答硬保证�
 
 ## S01 真实问答
 
-测试集：[stack-retrieval-v0.json](../data/evaluation/stack-retrieval-v0.json)，本次仅执行 S01，使用编排页“调试与预览”，未用替身或规则生成回答。
+测试集：[stack-retrieval-v0.json](../../data/evaluation/stack-retrieval-v0.json)，本次仅执行 S01，使用编排页“调试与预览”，未用替身或规则生成回答。
 
 问题：
 
@@ -52,9 +54,9 @@ Prompt 约束属于模型行为要求，不是可靠的权限或拒答硬保证�
 
 引用栏显示 `stack-v2.md`。打开后可查看分段 1“栈”、3“栈的实现”、4“两种实现对比”，显示分数分别约 0.48、0.39、0.35；分段 1 包含先入后出的定义，支持本题核心答案。这里的分数不能作为回答正确率或跨检索方案比较的依据。
 
-![第一题实际回答](screenshots/20261015-app-s01-answer.png)
+![第一题实际回答](../screenshots/20261015-app-s01-answer.png)
 
-![来源分段核查](screenshots/20261015-app-s01-sources.png)
+![来源分段核查](../screenshots/20261015-app-s01-sources.png)
 
 本题人工核查：核心回答正确，存在支持答案的来源分段，单题完整链路成功。失败样本：本轮单题未观察到调用失败；S02–S04 未运行，不能计算完整回答正确率或拒答率。截图保留了原始页面输出，本轮没有导出 Provider 原始响应或完整 Prompt Trace。
 
@@ -77,7 +79,7 @@ Prompt 约束属于模型行为要求，不是可靠的权限或拒答硬保证�
 - `grounded-rag-v1` Prompt 完整保留，知识库仍为 `stack-v2.md...`，显示“高质量 · 混合检索”。
 - 应用召回仍为语义 0.7／关键词 0.3、Top K=3、Score 阈值关闭。
 
-[发布成功截图](screenshots/20261015-app-published.png) · [刷新后召回配置](screenshots/20261015-app-persisted-retrieval.png)
+[发布成功截图](../screenshots/20261015-app-published.png) · [刷新后召回配置](../screenshots/20261015-app-persisted-retrieval.png)
 
 结论：配置发布与持久保存核查通过。此前 S01 是编排预览中的真实模型调用；本轮未新增模型调用，不能据此声称发布入口的回答质量通过。下一步从发布菜单的“运行”进入应用，逐题检查 S02 代码回答、S03 实现对比和 S04 无答案拒答，每题核对答案与引用并留存记录。
 
@@ -122,11 +124,11 @@ is_empty: bool = len(stack) == 0
 
 随后输出：“以上操作的时间复杂度均为 $O(1)$。”
 
-![S02 发布入口完整回答](screenshots/20261015-app-s02-answer.png)
+![S02 发布入口完整回答](../screenshots/20261015-app-s02-answer.png)
 
 引用栏显示 `stack-v2.md`，展开后的首项为“栈的常用操作”，随后为“栈的实现”和“栈”。首项内容对应入库分段 2，包含问题要求的三项 Python 操作。**发布网页引用浮层中的 1、2、3 是展示顺序，不能当作入库分段编号。**
 
-![S02 来源内容](screenshots/20261015-app-s02-sources.png)
+![S02 来源内容](../screenshots/20261015-app-s02-sources.png)
 
 人工核查结论：三项答案覆盖 3/3，且均有资料支持；发布入口的真实生成与引用展示链路成功。该结果只适用于 S02，不代表全量问答质量通过。
 
@@ -153,11 +155,11 @@ is_empty: bool = len(stack) == 0
 >
 > 链表实现的栈不会遇到同样的问题。链表在扩容时非常灵活，不需要像数组那样预先分配连续内存或进行整体复制，因此不存在因扩容导致单次入栈操作效率显著降低的情况。不过，链表入栈需要初始化节点对象并修改指针，其基础操作效率通常低于数组，但性能表现更加稳定。
 
-![S03 实际回答](screenshots/20261015-app-s03-answer.png)
+![S03 实际回答](../screenshots/20261015-app-s03-answer.png)
 
 展开 `stack-v2.md` 引用，展示顺序依次为“两种实现对比”“栈的实现”“栈”。首项对应入库分段 4，支持数组扩容单次 O(n)、链表没有同样扩容问题，以及节点初始化与指针操作开销这三项核心预期。展示顺序与入库编号不混用。
 
-![S03 引用内容](screenshots/20261015-app-s03-sources.png)
+![S03 引用内容](../screenshots/20261015-app-s03-sources.png)
 
 人工核查结果：核心要点覆盖 3/3，引用存在支持内容，本题真实问答链路成功；不将完整回答评为严格依据资料且无遗漏。
 
@@ -182,11 +184,11 @@ is_empty: bool = len(stack) == 0
 
 > 当前知识库资料不足，无法回答这个问题。
 
-![S04 拒答结果](screenshots/20261015-app-s04-answer.png)
+![S04 拒答结果](../screenshots/20261015-app-s04-answer.png)
 
 回答下仍显示“引用：stack-v2.md”。展开后依次为“栈”“栈的实现”“栈的常用操作”，对应入库分段 1、3、2，均不提供快速排序基准元素的选择方法。
 
-![S04 拒答时仍显示检索来源](screenshots/20261015-app-s04-sources.png)
+![S04 拒答时仍显示检索来源](../screenshots/20261015-app-s04-sources.png)
 
 人工核查：本次拒答符合预期，模型没有继续补充快速排序方法。单个无答案样本成功 1/1，不能据此推断稳定拒答率。引用展示单独记录为体验问题：用户可能误以为这些资料支持当前问题；本轮不修改界面或 Dify 源码。
 
@@ -231,7 +233,7 @@ is_empty: bool = len(stack) == 0
 
 进入应用「日志与标注」→ 选择“快速排序如何选择基准元素？”→ 将鼠标移至回答区域 → 点击回答右侧的日志图标（纸张列表样式），打开 `PROMPT LOG`。
 
-![S04 后台记录与统计](screenshots/20261016-s04-log-summary.png)
+![S04 后台记录与统计](../screenshots/20261016-s04-log-summary.png)
 
 本次已展开的日志包含 `SYSTEM`、`USER`、`ASSISTANT`。SYSTEM 开头实际为：
 
@@ -246,7 +248,7 @@ Use the following context as your learned knowledge, inside <context></context> 
 
 可见部分继续包含“栈的实现”、链表和数组实现内容。USER 为“快速排序如何选择基准元素？”，ASSISTANT 为“当前知识库资料不足，无法回答这个问题。”。
 
-![S04 Prompt 日志开头与回答](screenshots/20261016-s04-prompt-log.png)
+![S04 Prompt 日志开头与回答](../screenshots/20261016-s04-prompt-log.png)
 
 这份日志提供了比引用列表更直接的证据：栈资料被放入模型输入上下文，而模型最终拒答。候选被召回与候选足以回答问题仍是两项不同判断。
 
@@ -267,7 +269,7 @@ Use the following context as your learned knowledge, inside <context></context> 
 
 点击日志顶部模型旁的 `i`，本次浮层中 Temperature、Top P、Presence Penalty、Max Token 显示为“－”，Stop 为空。
 
-![S04 模型参数浮层](screenshots/20261016-s04-log-model-params.png)
+![S04 模型参数浮层](../screenshots/20261016-s04-log-model-params.png)
 
 源码使用 `model.completion_params?.[param] || '-'` 取值：即使存储的是数值 `0`，也会显示“－”。同时浮层只枚举固定字段 `temperature`、`top_p`、`presence_penalty`、`max_tokens`、`stop`，没有展示 Ollama 的 `num_predict`、`num_ctx`、`think`。因此浮层不能完整证明本次请求参数，不能把“－”解释成未配置或配置失效。本轮不修改 Dify 源码。
 

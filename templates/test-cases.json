@@ -1,0 +1,39 @@
+{
+  "version": "REPLACE_WITH_TEST_SET_VERSION",
+  "purpose": "待填写：开发回归集或独立验收集，以及适用范围；本文件不是已执行题集",
+  "annotation_timing": "待填写：预期答案和判定规则何时冻结，是否已查看模型输出",
+  "source_file": "REPLACE_WITH_PROJECT_RELATIVE_SOURCE_PATH",
+  "source_sha256": "REPLACE_WITH_ACTUAL_SOURCE_SHA256",
+  "cases": [
+    {
+      "id": "EXAMPLE01",
+      "turns": ["待替换：第一轮问题", "待替换：依赖第一轮语境的追问；单轮题删除此项"],
+      "expected_action": "answer",
+      "required_points": [
+        {"id": "point-1", "turn": 1, "meaning": "待填写：第一轮必须表达的语义要点", "evidence_id": "source-1"},
+        {"id": "point-2", "turn": 2, "meaning": "待填写：第二轮必须表达的语义要点", "evidence_id": "source-1"}
+      ],
+      "required_conditions": ["待填写：答案必须保留的版本、适用对象或操作前提；无要求时清空数组"],
+      "conditional_constraints": [
+        {"when": "待填写：回答主动涉及某一结论时", "requirement": "待填写：需要保留的条件或例外", "evidence_id": "source-1"}
+      ],
+      "evidence": [
+        {"id": "source-1", "section": "待填写：来源章节", "segment_number": null, "quotes": ["待填写：支持答案的原文，不填写模型生成答案"]}
+      ],
+      "forbidden_claims": ["待填写：不能出现的错误结论；无要求时清空数组"],
+      "not_required": ["待填写：不纳入该题验收的内容；无要求时清空数组"]
+    },
+    {
+      "id": "EXAMPLE02",
+      "turns": ["待替换：当前资料范围内没有答案的问题"],
+      "expected_action": "refuse",
+      "required_points": [{"id": "refusal", "meaning": "待填写：资料不足时应如何拒答或转人工"}],
+      "required_conditions": [],
+      "conditional_constraints": [],
+      "evidence": [],
+      "absence_basis": "待填写：核查了哪些资料，为什么可以确认本题无答案；不能以检索低分代替范围核查",
+      "forbidden_claims": ["待填写：不能脱离资料编造的内容"],
+      "not_required": []
+    }
+  ]
+}

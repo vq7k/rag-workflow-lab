@@ -1,6 +1,6 @@
 # 原应用 v1 恢复验证
 
-2026-10-16 用户恢复原 Prompt 并发布后，只读比较当前应用快照的全部所选字段，与原 v1 无差异；证据见 `config-verification.json`。
+2026-10-16 人工恢复原 Prompt 并发布后，只读比较当前应用快照的全部所选字段，与原 v1 无差异；证据见 `config-verification.json`。
 
 随后独立会话真实调用 S03，客户端等待 30.61 秒。`S03-request.json` 与 `S03-response.json` 保存完整应用请求体／响应；`S03-stored-message.json` 按返回 message_id 从数据库只读关联，确认属于目标应用、实际 SYSTEM 使用 v1 而非 v2、最终回答与 API 一致。
 
