@@ -27,7 +27,7 @@ def load_local_env():
         if not line or line.startswith('#'):
             continue
         key, sep, value = line.partition('=')
-        if not sep or key not in {'DIFY_API_BASE', 'DIFY_API_KEY', 'DIFY_DATASET_ID', 'DIFY_DOCUMENT_ID'}:
+        if not sep or key not in {'DIFY_API_BASE', 'DIFY_API_KEY', 'DIFY_DATASET_ID', 'DIFY_DOCUMENT_ID', 'DIFY_APP_API_KEY'}:
             raise ValueError('.env 仅支持文档中列出的 DIFY_* 键，格式为 KEY=value')
         os.environ.setdefault(key, value.strip().strip('\"\''))
 

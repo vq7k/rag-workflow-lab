@@ -1,0 +1,25 @@
+{
+  "case_id": "M01",
+  "turn": 2,
+  "checked_at": "2026-10-16T05:30:14.903684+00:00",
+  "backend_function_check": "pass",
+  "core": "pass",
+  "source": "pass",
+  "conditions": "fail",
+  "multiturn": "pass",
+  "quality_overall": "fail",
+  "reason": "第一轮定义正确；第二轮承接栈并正确描述入出栈和查看栈顶；均主动给出入栈O(1)而未保留扩容例外",
+  "same_conversation_verified": true,
+  "prior_question_and_answer_in_turn2_input_verified": true,
+  "pipeline_latency_s": 52.138731356244534,
+  "input_tokens": 1085,
+  "output_tokens": 263,
+  "manual_user_report": "用户回复已完成，确认执行了两轮操作",
+  "page_rendering_confirmation": "confirmed_by_user",
+  "evidence_file": "M01-T2-stored-message.json",
+  "final_page_user_report": {
+    "date": "2026-10-16",
+    "quote": "页面显示正常。",
+    "scope": "对本轮页面显示的统一人工确认；无截图，不证明逐项展开引用或历史展示问题已修复"
+  }
+}

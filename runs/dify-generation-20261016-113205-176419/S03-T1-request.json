@@ -1,0 +1,7 @@
+{
+  "inputs": {},
+  "query": "数组实现的栈为什么有时入栈会变慢？链表实现会遇到同样的问题吗？",
+  "response_mode": "blocking",
+  "conversation_id": "",
+  "user": "rag-lab-dify-generation-20261016-113205-176419"
+}

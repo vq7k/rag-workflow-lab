@@ -1,0 +1,32 @@
+[
+  {
+    "finished_at_utc": "2026-10-16T02:04:14.664261006Z",
+    "kind": "text_embedding",
+    "latency_ms": 1938,
+    "trace_id": "47c13909451ef73d1f273d374da0408b"
+  },
+  {
+    "finished_at_utc": "2026-10-16T02:05:40.560533296Z",
+    "kind": "llm",
+    "latency_ms": 85820,
+    "trace_id": "1e98ad3c8fe0b0c3afa75569769de1e1"
+  },
+  {
+    "finished_at_utc": "2026-10-16T02:05:42.279919463Z",
+    "kind": "llm",
+    "latency_ms": 1428,
+    "trace_id": "6af5d9b88f769306170a1536a6cfcff1"
+  },
+  {
+    "finished_at_utc": "2026-10-16T02:06:18.207079549Z",
+    "kind": "text_embedding",
+    "latency_ms": 4123,
+    "trace_id": "c269b914e03a3e920f7565d6db2f5b94"
+  },
+  {
+    "finished_at_utc": "2026-10-16T02:07:16.269913298Z",
+    "kind": "llm",
+    "latency_ms": 57890,
+    "trace_id": "a7366114a7790420f4832521f6a26e0a"
+  }
+]

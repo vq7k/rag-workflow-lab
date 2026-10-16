@@ -1,0 +1,108 @@
+text 对话 ID B21621D6-ADA9-4A7B-B567-8EF5301E3AE4
+								46 图像 model-icon
+								47 text qwen38-ms-8bit:latest CHAT
+								48 图像
+								49 按钮
+									50 图像
+								51 container
+									52 文本 栈是什么？
+									53 文本 🤖
+									54 container
+										55 文本 栈（stack）是一种遵循
+										56 文本 先入后出
+										57 text （LIFO, Last In First Out）逻辑的线性数据结构。 可以将其类比为桌面上的一摞盘子：规定每次只能移动一个盘子，若要取出底部的盘子，必须先依次移走上面的盘子。在栈中：
+										58 内容列表
+											59 container
+												60 AXListMarker • 
+												61 text 堆叠元素的顶部称为 栈顶 ，底部称为 栈底 。
+											62 container
+												63 AXListMarker • 
+												64 text 将元素添加到栈顶的操作称为 入栈 。
+											65 container
+												66 AXListMarker • 
+												67 text 删除栈顶元素的操作称为 出栈 。
+										68 文本 栈的典型应用包括：
+										69 内容列表
+											70 container
+												71 AXListMarker • 
+												72 文本 浏览器中的后退与前进、软件中的撤销与反撤销。
+											73 container
+												74 AXListMarker • 
+												75 文本 程序内存管理（如函数调用时栈帧的入栈与出栈）。
+										76 文本 栈可以基于链表或数组实现：
+										77 内容列表
+											78 container
+												79 AXListMarker • 
+												80 text 基于链表 ：将链表头节点视为栈顶，入栈使用“头插法”，出栈删除头节点。
+											81 container
+												82 AXListMarker • 
+												83 text 基于数组 ：将数组尾部作为栈顶，入栈和出栈均在数组尾部进行，时间复杂度为 $O(1)$，通常使用动态数组以自动处理扩容。
+										84 文本 引用
+										85 文本 stack-v2.md
+										86 文本 stack-v2.md
+									87 文本 耗时 88.00 秒
+									88 文本 花费 Token 867
+									89 文本 ·
+									90 文本 2026-10-16 10:04:13
+									91 文本 它有哪些常用操作？
+									92 文本 🤖
+									93 container
+										94 文本 栈的常用操作如下表所示（以常见的 
+										95 文本 push()
+										96 文本 、
+										97 文本 pop()
+										98 文本 、
+										99 文本 peek()
+										100 文本  命名为例）：
+										101 表格
+											102 row
+												103 列标题
+													104 文本 方法
+												105 列标题
+													106 文本 描述
+												107 列标题
+													108 文本 时间复杂度
+											109 row
+												110 单元格
+													111 文本 push()
+												112 单元格
+													113 文本 元素入栈（添加至栈顶）
+												114 单元格
+													115 文本 $O(1)$
+											116 row
+												117 单元格
+													118 文本 pop()
+												119 单元格
+													120 文本 栈顶元素出栈
+												121 单元格
+													122 文本 $O(1)$
+											123 row
+												124 单元格
+													125 文本 peek()
+												126 单元格
+													127 文本 访问栈顶元素
+												128 单元格
+													129 文本 $O(1)$
+										130 文本 此外，通常还可以获取栈的长度以及判断栈是否为空。
+										131 文本 Python 列表的栈操作示例
+										132 文本 PYTHON
+										133 按钮
+										134 container
+											135 text 1 # 初始化栈 2 # Python 没有内置的栈类，可以把 list 当作栈来使用 3 stack:  list [ int ] = []
+ 4 5 # 元素入栈 6 stack.append( 1 )
+ 7 stack.append( 3 )
+ 8 stack.append( 2 )
+ 9 stack.append( 5 )
+ 10 stack.append( 4 )
+ 11 12 # 访问栈顶元素 13 peek:  int  = stack[- 1 ]
+ 14 15 # 元素出栈 16 pop:  int  = stack.pop()
+ 17 18 # 获取栈的长度 19 size:  int  =  len (stack)
+ 20 21 # 判断是否为空 22 is_empty:  bool  =  len (stack) ==  0
+										136 文本 引用
+										137 文本 stack-v2.md
+										138 文本 stack-v2.md
+									139 文本 耗时 68.26 秒
+									140 文本 花费 Token 1,348
+									141 文本 ·
+									142 文本 2026-10-16 10:06:08
+			143 

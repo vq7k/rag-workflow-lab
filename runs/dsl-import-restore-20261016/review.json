@@ -1,0 +1,11 @@
+{
+  "method": "Codex人工对照S01预期、实际回答与保存消息",
+  "core": "pass",
+  "source": "pass",
+  "reason": "识别栈和先入后出，实际输入提供定义；未新增复杂度结论",
+  "clone_app_id": "1701328e-a125-43a7-bae4-ee7dc0461fc5",
+  "model": "qwen38-ms-8bit:latest",
+  "original_app_not_overwritten": true,
+  "temporary_api_key_absent_verified": true,
+  "scope": "同一工作空间及现有模型、知识库依赖下的配置恢复验证，非跨环境灾备"
+}

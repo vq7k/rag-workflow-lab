@@ -1,0 +1,24 @@
+{
+  "candidate": "grounded-rag-v2-candidate",
+  "baseline_run": "runs/dify-generation-20261016-113205-176419",
+  "candidate_run": "runs/dify-generation-20261016-114324-193879",
+  "changed_fields": [
+    "pre_prompt"
+  ],
+  "overall_passed_before": 2,
+  "overall_passed_after": 4,
+  "critical_regression": "S03 required_points.linked-list-overhead 未覆盖，核心由3/3降为2/3",
+  "improvements": [
+    "S02 不再主动泛化复杂度",
+    "M01 第一轮不再主动泛化复杂度",
+    "S03 不再补无依据分配和复制机制"
+  ],
+  "remaining": [
+    "S03 效率结论缺适用范围",
+    "M01 第二轮 push O(1) 缺扩容例外"
+  ],
+  "decision": "reject_candidate_restore_v1",
+  "rollback_status": "published_and_verified",
+  "scope": "单次小样本开发回归，非稳定性或正式准出结论",
+  "rollback_evidence": "runs/dify-restore-v1-20261016"
+}

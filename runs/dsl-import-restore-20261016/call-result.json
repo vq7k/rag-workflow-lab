@@ -1,0 +1,6 @@
+{
+  "status": "ok",
+  "client_latency_s": 31.4379,
+  "endpoint": "镜像内 127.0.0.1:5001/v1/chat-messages",
+  "scope": "DSL副本恢复真实API验证，不是原发布网页验收"
+}

@@ -1,0 +1,11 @@
+{
+  "verified_at": "2026-10-16T03:43:42.940116+00:00",
+  "method": "数据库只读核查应用指向配置的全部快照字段",
+  "changed_application_fields": [
+    "pre_prompt"
+  ],
+  "expected_changed_fields": [
+    "pre_prompt"
+  ],
+  "same_test_set_as_baseline": true
+}

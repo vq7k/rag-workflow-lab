@@ -1,0 +1,14 @@
+{
+  "status": "awaiting_manual_web_test",
+  "started_at_utc": "2026-10-16T04:22:31.066668",
+  "application_config_matches_v1": true,
+  "original_app_id": "03b1eb2b-d822-41b0-8d57-91a5e21e3be0",
+  "url": "http://localhost/chat/Ftp5iQMApw2UV9JM",
+  "planned_checks": [
+    "S01",
+    "S04",
+    "M01-T1",
+    "M01-T2"
+  ],
+  "evidence_boundary": "网页操作由用户执行；需结合页面确认与本次新后台消息，不使用API基线代替"
+}

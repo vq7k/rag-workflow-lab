@@ -1,0 +1,43 @@
+{
+  "investigated_at": "2026-10-16",
+  "method": "Read-only historical DB and service log inspection; no inference rerun or configuration change",
+  "correlation": "Host and plugin calls matched by time window, completion timestamps and prompt token counts; no common end-to-end trace_id",
+  "trace_state": {
+    "api_ENABLE_OTEL": false,
+    "apps_tracing": null,
+    "trace_app_config_rows": 0,
+    "message_chains_rows_for_two_messages": 0
+  },
+  "turns": [
+    {
+      "message_id": "9375cab6-7a27-4b49-8e6a-ab16b5af032c",
+      "created_at_utc": "2026-10-16 02:04:13",
+      "prompt_tokens": 639,
+      "answer_tokens": 228,
+      "pipeline_seconds": 88.00321974884719,
+      "embedding_plugin_seconds": 1.938,
+      "ollama_embedding_seconds": 1.9085005,
+      "llm_plugin_seconds": 85.82,
+      "mlx_startup_seconds_approx": 27.207,
+      "mlx_completions_seconds": 58.545453666
+    },
+    {
+      "message_id": "f0ffec94-65de-43c4-92d1-c6a13d98576d",
+      "created_at_utc": "2026-10-16 02:06:08",
+      "prompt_tokens": 1085,
+      "answer_tokens": 263,
+      "pipeline_seconds": 68.26304344786331,
+      "embedding_plugin_seconds": 4.123,
+      "ollama_embedding_seconds": 4.057573292,
+      "llm_plugin_seconds": 57.89,
+      "ollama_chat_seconds": 57.858358542,
+      "mlx_completions_seconds": 57.810438709
+    }
+  ],
+  "limits": [
+    "LLM plugin and MLX durations are nested, not additive",
+    "No precise TTFT or prompt/decode duration split for these requests",
+    "Second-turn residual time is not attributed to retrieval",
+    "Auxiliary LLM invocation of 1.428s and HTTP 402 appear in same time window; not attributed to main answer without correlation evidence"
+  ]
+}

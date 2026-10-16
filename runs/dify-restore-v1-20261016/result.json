@@ -1,0 +1,12 @@
+{
+  "status": "ok",
+  "client_latency_s": 30.6118,
+  "checked_at": "2026-10-16T03:49:00.935685+00:00",
+  "message_id": "c4aa05cd-84d5-4f4c-839e-701ebe58cafc",
+  "conversation_id": "ecb6b209-15f2-43a0-b395-e0ce4cffe3a2",
+  "scope": "原应用 v1 恢复后的单题真实验证，不代表发布全量验收",
+  "configuration_restored": true,
+  "stored_input_is_v1": true,
+  "core_points_restored": "3/3",
+  "legacy_quality_issues_remaining": true
+}

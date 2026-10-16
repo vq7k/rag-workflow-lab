@@ -1,0 +1,7 @@
+{
+  "inputs": {},
+  "query": "后放进去的东西反而先取出来，这属于什么结构？",
+  "response_mode": "blocking",
+  "conversation_id": "",
+  "user": "rag-lab-dify-generation-20261016-113205-176419"
+}

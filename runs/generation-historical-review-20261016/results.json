@@ -1,0 +1,56 @@
+[
+  {
+    "case_id": "M01",
+    "turn": 1,
+    "status": "ok",
+    "conversation_id": "b21621d6-ada9-4a7b-b567-8ef5301e3ae4",
+    "message_id": "9375cab6-7a27-4b49-8e6a-ab16b5af032c",
+    "historical_invoke_from": "web-app",
+    "evidence_file": "M01-T1-stored-message.json"
+  },
+  {
+    "case_id": "M01",
+    "turn": 2,
+    "status": "ok",
+    "conversation_id": "b21621d6-ada9-4a7b-b567-8ef5301e3ae4",
+    "message_id": "f0ffec94-65de-43c4-92d1-c6a13d98576d",
+    "historical_invoke_from": "web-app",
+    "evidence_file": "M01-T2-stored-message.json"
+  },
+  {
+    "case_id": "S01",
+    "turn": 1,
+    "status": "ok",
+    "conversation_id": "5d3c039b-9b24-4532-b462-3f8555d1e0e3",
+    "message_id": "55600e85-cc1d-4d51-964f-37d61dff9e9f",
+    "historical_invoke_from": "debugger",
+    "evidence_file": "S01-T1-stored-message.json"
+  },
+  {
+    "case_id": "S02",
+    "turn": 1,
+    "status": "ok",
+    "conversation_id": "430cb8e9-12f4-4565-816c-7555d2abab7e",
+    "message_id": "90b03ef7-c7c7-452f-a0b0-23761502f31b",
+    "historical_invoke_from": "web-app",
+    "evidence_file": "S02-T1-stored-message.json"
+  },
+  {
+    "case_id": "S03",
+    "turn": 1,
+    "status": "ok",
+    "conversation_id": "44890efa-7461-4db1-a84c-124c6aac3a4c",
+    "message_id": "79a05cf4-5cef-4d54-856a-aac90f0b863c",
+    "historical_invoke_from": "web-app",
+    "evidence_file": "S03-T1-stored-message.json"
+  },
+  {
+    "case_id": "S04",
+    "turn": 1,
+    "status": "ok",
+    "conversation_id": "0d744c05-eb8e-4d07-957d-1acee227f9ac",
+    "message_id": "0edc6933-b4e3-4ec0-b6f0-7368d47a2be6",
+    "historical_invoke_from": "web-app",
+    "evidence_file": "S04-T1-stored-message.json"
+  }
+]

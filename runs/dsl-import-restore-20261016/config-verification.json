@@ -1,0 +1,11 @@
+{
+  "clone_app_id": "1701328e-a125-43a7-bae4-ee7dc0461fc5",
+  "clone_name": "算法知识库问答实验-DSL恢复验证-20261016",
+  "original_app_id": "03b1eb2b-d822-41b0-8d57-91a5e21e3be0",
+  "different_app": true,
+  "model_config_differences": [],
+  "dependency_check": {
+    "leaked_dependencies": []
+  },
+  "published_web_url": "http://localhost/chat/Fe24IJ9EmtQAkwaf"
+}

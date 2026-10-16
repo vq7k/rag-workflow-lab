@@ -1,0 +1,50 @@
+[
+  {
+    "case_id": "S01",
+    "turn": 1,
+    "status": "ok",
+    "latency_s": 42.3923,
+    "conversation_id": "ae137d66-f17c-43e9-8328-699e3ad7cc1e",
+    "message_id": "f0735c06-62d6-4a4e-a0f6-cb6c85b3f1b9"
+  },
+  {
+    "case_id": "S02",
+    "turn": 1,
+    "status": "ok",
+    "latency_s": 62.6641,
+    "conversation_id": "54fae5e8-44af-460b-b3fe-66eb9b3ef1ce",
+    "message_id": "1aea9d56-50aa-4870-a473-174a7637029b"
+  },
+  {
+    "case_id": "S03",
+    "turn": 1,
+    "status": "ok",
+    "latency_s": 21.7716,
+    "conversation_id": "b3ec37de-27ff-42a0-b5ac-259a996decea",
+    "message_id": "8652c1fc-f060-46dc-b9df-7fb4ecf1ae27"
+  },
+  {
+    "case_id": "S04",
+    "turn": 1,
+    "status": "ok",
+    "latency_s": 12.2143,
+    "conversation_id": "8714aaaa-42a9-4ac8-baba-bb2b7f7125e4",
+    "message_id": "afd37e71-6eb8-4c71-9a02-d6f29ddc73bf"
+  },
+  {
+    "case_id": "M01",
+    "turn": 1,
+    "status": "ok",
+    "latency_s": 23.7891,
+    "conversation_id": "01e42003-1b70-4253-9ea4-9f3cb990fd08",
+    "message_id": "9b87656b-7b8d-4309-a6e9-e14944ed98f6"
+  },
+  {
+    "case_id": "M01",
+    "turn": 2,
+    "status": "ok",
+    "latency_s": 22.6977,
+    "conversation_id": "01e42003-1b70-4253-9ea4-9f3cb990fd08",
+    "message_id": "d0ec3648-dca4-40dd-a89f-58760319c9e4"
+  }
+]

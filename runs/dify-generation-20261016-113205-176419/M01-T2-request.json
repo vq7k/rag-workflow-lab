@@ -1,0 +1,7 @@
+{
+  "inputs": {},
+  "query": "它有哪些常用操作？",
+  "response_mode": "blocking",
+  "conversation_id": "be0668aa-354c-42be-a5d3-caa89246e242",
+  "user": "rag-lab-dify-generation-20261016-113205-176419"
+}

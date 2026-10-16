@@ -1,0 +1,24 @@
+{
+  "case_id": "S04",
+  "checked_at": "2026-10-16T04:38:39.424776+00:00",
+  "backend_check": "pass",
+  "refusal": "pass",
+  "core": "pass",
+  "source": "pass",
+  "reason": "当前输入为栈章节候选并含v1拒答指令；完整回答只说明资料不足，未补快速排序知识",
+  "independent_conversation_from_s01": true,
+  "invoke_from": "web-app",
+  "pipeline_latency_s": 27.050559387076646,
+  "input_tokens": 833,
+  "output_tokens": 9,
+  "returned_source_count": 3,
+  "source_display_issue": "后台仍返回栈候选；用户统一确认页面显示正常，不据此将拒答候选引用问题标为已修复",
+  "manual_user_report": "用户回复已问，确认进行了页面提问",
+  "page_rendering_confirmation": "confirmed_by_user",
+  "evidence_file": "S04-stored-message.json",
+  "final_page_user_report": {
+    "date": "2026-10-16",
+    "quote": "页面显示正常。",
+    "scope": "对本轮页面显示的统一人工确认；无截图，不证明逐项展开引用或历史展示问题已修复"
+  }
+}

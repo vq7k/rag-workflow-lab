@@ -221,3 +221,64 @@ is_empty: bool = len(stack) == 0
 页面统计：**耗时 13.95 秒、花费 Token 842，记录时间 2026-10-15 18:18:11**。这些是 Dify 后台展示值，本次尚未核对耗时统计边界、输入输出 Token 拆分，也未取得首 Token 延迟或完整模型输入。因此不将这些值解释为纯模型推理耗时或输出 Token 数。
 
 当天在此暂停，未继续展开日志详情，未留存本次日志截图。后续从该记录继续，不需要重跑 S04 才能查历史日志。日志中另有“你好”会话，不属于固定评测集，不计入四题结果。
+
+
+## S04 历史日志核查（2026-10-16）
+
+本轮只读查看 2026-10-15 18:18:11 的历史对话，没有修改应用配置，也没有重新调用模型。后台模型、问题、拒答输出与此前发布网页一致。
+
+### 入口与实际模型输入
+
+进入应用「日志与标注」→ 选择“快速排序如何选择基准元素？”→ 将鼠标移至回答区域 → 点击回答右侧的日志图标（纸张列表样式），打开 `PROMPT LOG`。
+
+![S04 后台记录与统计](screenshots/20261016-s04-log-summary.png)
+
+本次已展开的日志包含 `SYSTEM`、`USER`、`ASSISTANT`。SYSTEM 开头实际为：
+
+```text
+Use the following context as your learned knowledge, inside <context></context> XML tags.
+
+<context>
+栈
+栈（stack）是一种遵循先入后出逻辑的线性数据结构。
+...
+```
+
+可见部分继续包含“栈的实现”、链表和数组实现内容。USER 为“快速排序如何选择基准元素？”，ASSISTANT 为“当前知识库资料不足，无法回答这个问题。”。
+
+![S04 Prompt 日志开头与回答](screenshots/20261016-s04-prompt-log.png)
+
+这份日志提供了比引用列表更直接的证据：栈资料被放入模型输入上下文，而模型最终拒答。候选被召回与候选足以回答问题仍是两项不同判断。
+
+本次截图仅保留 Prompt 日志开头；浏览器自动化滚动报错，SYSTEM 全文、`</context>` 后的内容及自定义拒答指令位置尚未逐项核查。页面日志也不是 Ollama 原始 HTTP 请求，不据此声称已取得完整 Provider Trace。
+
+### Token 与耗时的统计口径
+
+| 页面字段 | 本题显示 | 源码映射与解释 |
+|---|---|---|
+| 花费 Token | 842 | `message_tokens + answer_tokens`，即保存的输入与输出 Token 合计；不是输出长度 |
+| 输入 Token | 本轮未取得单独数值 | 后端从 `usage.prompt_tokens` 保存到 `message_tokens` |
+| 输出 Token | 本轮未取得单独数值 | 后端从 `usage.completion_tokens` 保存到 `answer_tokens` |
+| 耗时 | 13.95 秒 | 前端展示 `provider_response_latency`，后端以保存消息时的 `perf_counter() - self.start_at` 赋值；起点在任务 Pipeline 初始化 |
+
+因此 13.95 秒是该任务 Pipeline 的计时间隔，不能直接解释为纯模型推理耗时，也不等于从用户点击到浏览器渲染完成的端到端延迟。本轮没有取得检索、Prompt 构建、模型生成的独立耗时或首 Token 延迟，不据此计算生成速度。
+
+### 模型参数浮层的显示限制
+
+点击日志顶部模型旁的 `i`，本次浮层中 Temperature、Top P、Presence Penalty、Max Token 显示为“－”，Stop 为空。
+
+![S04 模型参数浮层](screenshots/20261016-s04-log-model-params.png)
+
+源码使用 `model.completion_params?.[param] || '-'` 取值：即使存储的是数值 `0`，也会显示“－”。同时浮层只枚举固定字段 `temperature`、`top_p`、`presence_penalty`、`max_tokens`、`stop`，没有展示 Ollama 的 `num_predict`、`num_ctx`、`think`。因此浮层不能完整证明本次请求参数，不能把“－”解释成未配置或配置失效。本轮不修改 Dify 源码。
+
+### 源码依据与未完成项
+
+核查的本地 Dify checkout 为 `1.13.0`；以下路径均相对于 Dify 源码根目录，便于在其他电脑和 GitHub 上查找。这是源码口径核查，未额外验证运行镜像与 checkout 的逐文件一致性。
+
+- `web/app/components/app/log/list.tsx`：合计 Token、耗时和引用字段的页面映射。
+- `web/app/components/app/log/model-info.tsx`：固定参数列表及 `|| '-'` 显示逻辑。
+- `web/app/components/base/chat/chat/answer/operation.tsx`、`web/app/components/base/chat/chat/log/index.tsx`：回答悬浮操作与 Prompt 日志入口。
+- `api/core/app/task_pipeline/based_generate_task_pipeline.py`：在初始化时设置 `start_at`。
+- `api/core/app/task_pipeline/easy_ui_based_generate_task_pipeline.py`：保存实际 Prompt、输入输出 Token 及计时间隔。
+
+剩余缺口：SYSTEM 全文与自定义指令位置、输入输出 Token 拆分、Provider 原始参数与响应、各处理阶段耗时。当前已具备继续讨论生成评测规则的基础，但上述缺口不视为已验证；如需完整输入证据，可先手动滚动 Prompt 日志核查并补截图。

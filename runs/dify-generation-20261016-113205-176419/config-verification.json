@@ -1,0 +1,9 @@
+{
+  "method": "只读核对当前应用指向的 model config",
+  "checks": {
+    "model": true,
+    "pre_prompt": true,
+    "dataset_configs": true
+  },
+  "scope": "非 Provider 原始请求验证"
+}

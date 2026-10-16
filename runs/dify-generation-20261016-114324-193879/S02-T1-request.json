@@ -1,0 +1,7 @@
+{
+  "inputs": {},
+  "query": "Python 用列表作为栈时，如何查看栈顶、弹出元素并判断是否为空？",
+  "response_mode": "blocking",
+  "conversation_id": "",
+  "user": "rag-lab-dify-generation-20261016-114324-193879"
+}

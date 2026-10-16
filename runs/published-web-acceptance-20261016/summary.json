@@ -1,0 +1,14 @@
+{
+  "web_requests": 4,
+  "backend_function_checks_passed": 4,
+  "same_version_v1_verified": true,
+  "multiturn_same_conversation_verified": true,
+  "multiturn_history_in_input_verified": true,
+  "quality_overall_passed": 2,
+  "quality_overall_failed": 2,
+  "page_rendering_confirmation": "confirmed_by_user",
+  "page_screenshots": "not_collected",
+  "scope": "四次新网页请求的后台核心功能核查与用户人工页面确认；严格生成质量仍为2通过、2不通过",
+  "page_rendering_user_report": "页面显示正常。",
+  "page_rendering_confirmation_date": "2026-10-16"
+}

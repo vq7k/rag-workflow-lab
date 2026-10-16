@@ -1,0 +1,7 @@
+case_id,turn,core,source,conditions,refusal,multiturn,overall,reason,reviewer,context_verified,evidence_path
+S01,1,pass,pass,na,na,na,pass,回答识别栈与先入后出，实际 SYSTEM 定义支持；未增加条件性性能结论,Codex 人工对照复核,stored_complete,S01-T1-stored-message.json
+S02,1,pass,pass,fail,na,na,fail,三个操作均正确且有上下文支持；“以上操作的时间复杂度均为 O(1)”涵盖 append，未保留扩容例外；实际输入无该例外,Codex 人工对照复核,stored_complete,S02-T1-stored-message.json
+S03,1,pass,fail,fail,na,na,fail,核心三项正确；“分配新的、更大的内存空间，并将原有元素复制过去”无实际上下文依据；输入已含节点复用和基本类型限定，回答遗漏,Codex 人工对照复核,stored_complete,S03-T1-stored-message.json
+S04,1,pass,pass,na,pass,na,pass,当前输入为栈资料且有拒答指令，最终只回答资料不足，未补快速排序知识；仍展示候选引用，体验问题未解决,Codex 人工对照复核,stored_complete,S04-T1-stored-message.json
+M01,1,pass,pass,fail,na,na,fail,先入后出及实现等有上下文支持，但主动概括数组尾部入栈 O(1) 未保留扩容例外，输入也未含例外,Codex 人工对照复核,stored_complete,M01-T1-stored-message.json
+M01,2,pass,pass,fail,na,pass,fail,第二轮承接栈主题并给出三项操作；输入实际包含首轮问答，但 push 的 O(1) 表格仍未保留动态数组扩容例外,Codex 人工对照复核,stored_complete,M01-T2-stored-message.json

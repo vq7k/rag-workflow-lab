@@ -1,0 +1,12 @@
+[GIN] 2026/10/16 - 10:04:14 | 200 |    1.9085005s |       127.0.0.1 | POST     "/api/embed"
+time=2026-10-16T10:04:14.795+08:00 level=INFO source=client.go:441 msg="starting mlx runner subprocess" model=qwen38-ms-8bit:latest port=62352
+time=2026-10-16T10:04:42.002+08:00 level=INFO source=client.go:109 msg="mlx runner is ready" port=62352
+time=2026-10-16T10:04:42.053+08:00 level=INFO source=prefix_cache.go:141 msg="cache miss" total=639 matched=0 cached=0 left=639
+time=2026-10-16T10:05:03.014+08:00 level=INFO source=pipeline.go:220 msg="Prompt processing progress" processed=638 total=639
+[GIN] 2026/10/16 - 10:05:40 | 200 |         1m25s |       127.0.0.1 | POST     "/api/chat"
+time=2026-10-16T10:05:40.555+08:00 level=INFO source=server.go:232 msg=ServeHTTP method=POST path=/v1/completions took=58.545453666s status="200 OK"
+[GIN] 2026/10/16 - 10:06:18 | 200 |  4.057573292s |       127.0.0.1 | POST     "/api/embed"
+time=2026-10-16T10:06:18.471+08:00 level=INFO source=prefix_cache.go:141 msg="cache miss" total=1085 matched=26 cached=0 left=1085
+time=2026-10-16T10:06:33.677+08:00 level=INFO source=pipeline.go:220 msg="Prompt processing progress" processed=1084 total=1085
+[GIN] 2026/10/16 - 10:07:16 | 200 | 57.858358542s |       127.0.0.1 | POST     "/api/chat"
+time=2026-10-16T10:07:16.271+08:00 level=INFO source=server.go:232 msg=ServeHTTP method=POST path=/v1/completions took=57.810438709s status="200 OK"

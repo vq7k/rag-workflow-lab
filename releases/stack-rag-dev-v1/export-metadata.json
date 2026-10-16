@@ -1,0 +1,12 @@
+{
+  "method": "调用当前 Dify 镜像内官方 AppDslService.export_dsl(include_secret=False)，只读导出",
+  "app_id": "03b1eb2b-d822-41b0-8d57-91a5e21e3be0",
+  "dify_version": "1.13.0",
+  "prompt_version": "grounded-rag-v1",
+  "sha256": "c1be82c2b7dc384d91117e9d6505541bab8c794cb8221126cdfeebb8d0813f25",
+  "known_local_api_keys_absent": true,
+  "import_restore_tested": true,
+  "scope": "应用配置，不是知识库、数据库、模型或凭据备份",
+  "import_restore_evidence": "runs/dsl-import-restore-20261016",
+  "restore_scope": "当前工作空间既有依赖下新建副本，配置比对与单题真实API推理，不是跨服务器灾备"
+}

@@ -1,0 +1,27 @@
+{
+  "test_id": "multiturn-smoke-v0",
+  "date": "2026-10-16",
+  "provider": "Ollama",
+  "model": "qwen38-ms-8bit:latest",
+  "model_digest": "6893e5419c74d14338c77501395a2dc1d4180b30e9f03f9af898d5932ebeb483",
+  "prompt_version": "grounded-rag-v1",
+  "knowledge_version": "stack-v2.md",
+  "conversation_id": "b21621d6-ada9-4a7b-b567-8ef5301e3ae4",
+  "turns": [
+    {
+      "query": "栈是什么？",
+      "expected": "回答栈的定义和先入后出",
+      "displayed_latency_seconds": 88.0,
+      "displayed_total_tokens": 867
+    },
+    {
+      "query": "它有哪些常用操作？",
+      "expected": "延续栈主题，说明 push/pop/peek",
+      "displayed_latency_seconds": 68.26,
+      "displayed_total_tokens": 1348
+    }
+  ],
+  "scope": "一组真实两轮开发检查；不是稳定性或正式验收集",
+  "evidence": "UI 渲染文本与后台日志；未导出 Provider 原始响应或完整 Prompt",
+  "configuration_changed": false
+}

@@ -1,0 +1,7 @@
+case_id,turn,core,source,conditions,refusal,multiturn,overall,reason,reviewer,context_verified,evidence_path
+S01,1,pass,pass,na,na,na,pass,栈和先入后出正确，盘子类比有实际上下文支持；未主动展开性能结论,Codex 人工对照复核,stored_complete,S01-T1-stored-message.json
+S02,1,pass,pass,na,na,na,pass,三个 Python 操作均正确；未再主动概括复杂度，因此不触发复杂度条件约束,Codex 人工对照复核,stored_complete,S02-T1-stored-message.json
+S03,1,fail,pass,fail,na,na,fail,核心仅2/3：保留数组超容量单次 O(n) 与链表无同类问题，但漏节点初始化和指针操作开销；未编造复制过程，效率比较仍未保留基本数据类型范围,Codex 人工对照复核,stored_complete,S03-T1-stored-message.json
+S04,1,pass,pass,na,pass,na,pass,资料不足时明确拒答，未补快速排序方法；候选引用展示问题单独保留,Codex 人工对照复核,stored_complete,S04-T1-stored-message.json
+M01,1,pass,pass,na,na,na,pass,定义及盘子类比、栈顶栈底与入出栈概念均被本轮上下文支持；未再概括复杂度,Codex 人工对照复核,stored_complete,M01-T1-stored-message.json
+M01,2,pass,pass,fail,na,pass,fail,同会话承接栈并正确描述三操作，但主动输出 push O(1) 仍缺动态数组扩容例外；实际输入没有该例外,Codex 人工对照复核,stored_complete,M01-T2-stored-message.json

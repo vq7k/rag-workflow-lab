@@ -1,0 +1,23 @@
+{
+  "case_id": "S01",
+  "checked_at": "2026-10-16T04:27:29.394859+00:00",
+  "request_identity": "新验收起点后的唯一同题消息，invoke_from=web-app",
+  "backend_check": "pass",
+  "core": "pass",
+  "source": "pass",
+  "conditions": "na",
+  "reason": "识别栈与先入后出，实际 SYSTEM 与首项来源有明确支持，未主动添加复杂度结论",
+  "actual_model": "qwen38-ms-8bit:latest",
+  "pipeline_latency_s": 43.77870276989415,
+  "input_tokens": 861,
+  "output_tokens": 46,
+  "manual_user_report": "用户回复已问，确认进行了页面提问",
+  "page_rendering_and_reference_expansion": "页面显示已获用户人工确认；无截图，未单独核查引用展开细节",
+  "evidence_file": "S01-stored-message.json",
+  "page_rendering_confirmation": "confirmed_by_user",
+  "final_page_user_report": {
+    "date": "2026-10-16",
+    "quote": "页面显示正常。",
+    "scope": "对本轮页面显示的统一人工确认；无截图，不证明逐项展开引用或历史展示问题已修复"
+  }
+}

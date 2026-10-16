@@ -1,0 +1,9 @@
+{
+  "planned_turns": 6,
+  "execution_ok": 6,
+  "execution_failed_or_skipped": 0,
+  "quality_passed": 2,
+  "quality_failed": 4,
+  "quality_pending": 0,
+  "scope": "混合历史入口的人工复核计数，非统一 API 基线；未发起新调用"
+}
